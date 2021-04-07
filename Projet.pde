@@ -5,6 +5,7 @@ Map3D map;
 Land land;
 Gpx gpx;
 Railways railways;
+Roads roads;
 
 /** Vérifie si un nom de fichier correspond à un fichier existant
  * @param filename Le nom du fichier à chercher
@@ -33,6 +34,7 @@ void setup() {
   land = new Land(this.map, "paris_saclay_high_res.jpg");
   gpx = new Gpx(this.map, "trail.geojson", cam);
   railways = new Railways(this.map, "railways.geojson");
+  roads = new Roads(this.map, "roads.geojson");
   
   hint(ENABLE_KEY_REPEAT);
 }
@@ -44,6 +46,7 @@ void draw() {
   land.update();
   gpx.update();
   railways.update();
+  roads.update();
   hud.update();
 }
 
@@ -98,6 +101,7 @@ void keyPressed() {
       case 'r':
       case 'R':
         this.railways.toggle();
+        this.roads.toggle();
         break;
       
       default:

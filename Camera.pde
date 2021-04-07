@@ -18,7 +18,7 @@ public class Camera {
   }
   
   public void update() {
-    ambientLight(0x7F, 0x7F, 0x7F);
+    ambientLight(0x60, 0x60, 0x60);
     if (lightning)
       directionalLight(0xA0, 0xA0, 0x60, 0, 0, -1);
     lightFalloff(0.0f, 0.0f, 1.0f);
