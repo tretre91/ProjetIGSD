@@ -13,7 +13,7 @@ Railways railways;
 public boolean fileExists(String filename) {
   File ressource = dataFile(filename);
   if (!ressource.exists() || ressource.isDirectory()) {
-    println("ERROR: GeoJSON file " + filename + " not found.");
+    println("ERROR: file " + filename + " not found.");
     return false;
   }
   return true;
@@ -32,7 +32,7 @@ void setup() {
   map = new Map3D("paris_saclay.data");
   land = new Land(this.map, "paris_saclay_high_res.jpg");
   gpx = new Gpx(this.map, "trail.geojson", cam);
-  railways = new Railways(this.map, "export.geojson");
+  railways = new Railways(this.map, "railways.geojson");
   
   hint(ENABLE_KEY_REPEAT);
 }

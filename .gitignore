@@ -2,3 +2,6 @@
 documentation/
 exemples/
 instructions/
+
+# Ignore le fichier qui contient les remarques
+Remarques.md
