@@ -1,0 +1,4 @@
+# Ignore les dossiers qui ne contiennent que des documents
+documentation/
+exemples/
+instructions/
