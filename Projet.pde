@@ -6,6 +6,7 @@ Land land;
 Gpx gpx;
 Railways railways;
 Roads roads;
+Buildings buildings;
 
 /** Vérifie si un nom de fichier correspond à un fichier existant
  * @param filename Le nom du fichier à chercher
@@ -30,11 +31,20 @@ void setup() {
   hud = new Hud(cam);
   
   // load height map
-  map = new Map3D("paris_saclay.data");
-  land = new Land(this.map, "paris_saclay_high_res.jpg");
-  gpx = new Gpx(this.map, "trail.geojson", cam);
-  railways = new Railways(this.map, "railways.geojson");
-  roads = new Roads(this.map, "roads.geojson");
+  this.map = new Map3D("paris_saclay.data");
+  this.land = new Land(this.map, "paris_saclay_high_res.jpg");
+  this.gpx = new Gpx(this.map, "trail.geojson", cam);
+  
+  this.railways = new Railways(this.map, "railways.geojson");
+  this.roads = new Roads(this.map, "roads.geojson");
+  
+  this.buildings = new Buildings(this.map);
+  this.buildings.add("buildings_city.geojson", 0xFFaaaaaa);
+  this.buildings.add("buildings_IPP.geojson", 0xFFCB9837);
+  this.buildings.add("buildings_EDF_Danone.geojson", 0xFF3030FF);
+  this.buildings.add("buildings_CEA_algorithmes.geojson", 0xFF30FF30);
+  this.buildings.add("buildings_Thales.geojson", 0xFFFF3030);
+  this.buildings.add("buildings_Paris_Saclay.geojson", 0xFFee00dd);
   
   hint(ENABLE_KEY_REPEAT);
 }
@@ -44,9 +54,10 @@ void draw() {
   cam.update();
   workspace.update();
   land.update();
-  gpx.update();
   railways.update();
   roads.update();
+  buildings.update();
+  gpx.update();
   hud.update();
 }
 
@@ -104,6 +115,11 @@ void keyPressed() {
         this.roads.toggle();
         break;
       
+      case 'b':
+      case 'B':
+        this.buildings.toggle();
+        break;
+      
       default:
         break;
     }
@@ -120,7 +136,7 @@ void mouseDragged() {
     float dx = mouseX - pmouseX;
     cam.adjustLongitude((-PI / 2) * (dx / width));
     float dy = mouseY - pmouseY;
-    cam.adjustColatitude((PI / 4) * (-dy / height));
+    cam.adjustColatitude((PI / 4) * (-dy / width));
   }
 }
 
