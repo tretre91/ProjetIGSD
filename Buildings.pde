@@ -56,33 +56,43 @@ public class Buildings {
               points.add(op.toVector());
             }
           }
-          
-          final float top = maxZ + (Map3D.heightScale * 3.0f * levels); 
-          walls = createShape();
-          walls.beginShape(QUAD_STRIP);
-          walls.fill(buildingColor);
-          walls.emissive(0x30);
-          walls.noStroke();
-          for (PVector v: points) {
-            walls.vertex(v.x, v.y, v.z);
-            walls.vertex(v.x, v.y, top);
+          if (points.size() > 1) {
+            points.add(points.get(0));
+            
+            final float top = maxZ + (Map3D.heightScale * 3.0f * levels); 
+            walls = createShape();
+            walls.beginShape(QUADS);
+            walls.fill(buildingColor);
+            walls.emissive(0x30);
+            walls.noStroke();
+            PVector previous = points.get(0);
+            for (int k = 1; k < points.size(); k++) {
+              final PVector v = points.get(k);
+              final PVector vn = v.copy().sub(previous).cross(new PVector(0, 0, -1)).normalize();
+              walls.normal(vn.x, vn.y, vn.z);
+              walls.vertex(previous.x, previous.y, previous.z);
+              walls.vertex(previous.x, previous.y, top);
+              walls.vertex(v.x, v.y, top);
+              walls.vertex(v.x, v.y, v.z);
+              previous = v;
+            }
+            walls.endShape();
+            
+            roof = createShape();
+            roof.beginShape(POLYGON);
+            roof.fill(buildingColor);
+            roof.emissive(0x60);
+            roof.noStroke();
+            for (PVector v: points) {
+              roof.normal(0.0f, 0.0f, -1.0f);
+              roof.vertex(v.x, v.y, top);
+            }
+            roof.endShape();
+            
+            buildingsGroup.addChild(walls);
+            buildingsGroup.addChild(roof);
+            points.clear();
           }
-          walls.endShape();
-          
-          roof = createShape();
-          roof.beginShape();
-          roof.fill(buildingColor);
-          roof.emissive(0x60);
-          roof.noStroke();
-          for (PVector v: points) {
-            roof.normal(0.0f, 0.0f, -1.0f);
-            roof.vertex(v.x, v.y, top);
-          }
-          roof.endShape(CLOSE);
-          
-          buildingsGroup.addChild(walls);
-          buildingsGroup.addChild(roof);
-          points.clear();
         }
       }
     }

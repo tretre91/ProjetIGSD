@@ -58,7 +58,7 @@ public class Gpx {
           JSONArray coordinates = geometry.getJSONArray("coordinates");
           if (coordinates != null) {
             this.track = createShape();
-            this.track.beginShape();
+            this.track.beginShape(LINE_STRIP);
             this.track.noFill();
             this.track.stroke(color(193, 123, 208));
             this.track.strokeWeight(2.0f);
