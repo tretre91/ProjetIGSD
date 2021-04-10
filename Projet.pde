@@ -120,6 +120,11 @@ void keyPressed() {
       case 'B':
         this.buildings.toggle();
         break;
+
+      case 'h':
+      case 'H':
+        this.land.toggleHeatmap();
+        break;
       
       default:
         break;

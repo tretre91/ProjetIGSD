@@ -1,0 +1,3330 @@
+{
+  "type": "FeatureCollection",
+  "generator": "overpass-ide",
+  "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
+  "timestamp": "2021-04-10T11:09:26Z",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/530276824",
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "noname": "yes",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "tactile_paving": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1926496,
+          48.7064276
+        ]
+      },
+      "id": "node/530276824"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/604035097",
+        "STIF:zone": "5",
+        "bench": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Charles de Gaulle",
+        "public_transport": "platform",
+        "ref:FR:STIF": "11397",
+        "ref:FR:STIF:stop_id": "StopPoint:57:1041",
+        "route_ref": "8;9",
+        "shelter": "no",
+        "tactile_paving": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1892085,
+          48.7013948
+        ]
+      },
+      "id": "node/604035097"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/677507133",
+        "STIF:zone": "5",
+        "bench": "no",
+        "bus": "yes",
+        "covered": "no",
+        "highway": "bus_stop",
+        "name": "Bois des Rames",
+        "public_transport": "platform",
+        "ref:FR:STIF": "11435",
+        "ref:FR:STIF:stop_id": "StopPoint:57:1311",
+        "route_ref": "7",
+        "shelter": "no",
+        "source:wheelchair": "STIF 2019-01",
+        "tactile_paving": "no",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1807033,
+          48.7068553
+        ]
+      },
+      "id": "node/677507133"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/811025548",
+        "STIF:zone": "5",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Launay",
+        "public_transport": "platform",
+        "ref:FR:STIF": "11433",
+        "ref:FR:STIF:stop_id": "StopPoint:57:1301",
+        "route_ref": "7",
+        "shelter": "yes",
+        "source:wheelchair": "STIF 2019-01",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1810888,
+          48.7027332
+        ]
+      },
+      "id": "node/811025548"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1114038111",
+        "STIF:zone": "5",
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Corbeville",
+        "public_transport": "platform",
+        "ref:FR:STIF": "420695",
+        "ref:FR:STIF:stop_id": "StopPoint:56:11901",
+        "route_ref": "91-10;91-06;91-08",
+        "shelter": "yes",
+        "source:wheelchair": "STIF 2019-01",
+        "tactile_paving": "yes",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1909943,
+          48.7135738
+        ]
+      },
+      "id": "node/1114038111"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1114038113",
+        "STIF:zone": "5",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Mûriers",
+        "public_transport": "platform",
+        "ref:FR:STIF": "11410",
+        "ref:FR:STIF:stop_id": "StopPoint:57:1160",
+        "route_ref": "9",
+        "shelter": "no",
+        "source:wheelchair": "STIF 2019-01",
+        "tactile_paving": "no",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1828825,
+          48.7119978
+        ]
+      },
+      "id": "node/1114038113"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1335923953",
+        "STIF:zone": "5",
+        "bench": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Plateau de Moulon - Corbeville",
+        "public_transport": "platform",
+        "ref:FR:STIF": "11447",
+        "ref:FR:STIF:stop_id": "StopPoint:57:1471",
+        "route_ref": "7;9",
+        "shelter": "no",
+        "source:wheelchair": "STIF 2019-01",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1732058,
+          48.7140527
+        ]
+      },
+      "id": "node/1335923953"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1341289988",
+        "STIF:zone": "4",
+        "bench": "yes",
+        "bus": "yes",
+        "flickr": "https://www.flickr.com/photos/145224554@N02/37217992664/",
+        "highway": "bus_stop",
+        "name": "ENSTA - Les Joncherettes",
+        "public_transport": "platform",
+        "ref:FR:STIF": "9239",
+        "ref:FR:STIF:stop_id": "StopPoint:57:2013;StopPoint:56:11805",
+        "route_ref": "14;91-06;91-10",
+        "shelter": "yes",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2186903,
+          48.7100776
+        ]
+      },
+      "id": "node/1341289988"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1341778473",
+        "STIF:zone": "5",
+        "bench": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Gare du Guichet RER",
+        "public_transport": "platform",
+        "ref:FR:STIF": "11415",
+        "ref:FR:STIF:stop_id": "StopPoint:57:1196",
+        "route_ref": "9",
+        "shelter": "no",
+        "source:wheelchair": "STIF 2019-01",
+        "tactile_paving": "no",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1912871,
+          48.7062202
+        ]
+      },
+      "id": "node/1341778473"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1341778664",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Gare du Guichet RER",
+        "public_transport": "platform",
+        "shelter": "no",
+        "tactile_paving": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1915192,
+          48.7059476
+        ]
+      },
+      "id": "node/1341778664"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1341778752",
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Gare du Guichet RER",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "tactile_paving": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1916452,
+          48.7062403
+        ]
+      },
+      "id": "node/1341778752"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1345568298",
+        "STIF:zone": "5",
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Charles de Gaulle",
+        "public_transport": "platform",
+        "ref:FR:STIF": "11396",
+        "ref:FR:STIF:stop_id": "StopPoint:57:1040",
+        "route_ref": "8;9",
+        "shelter": "no",
+        "tactile_paving": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1884236,
+          48.7009371
+        ]
+      },
+      "id": "node/1345568298"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1363114625",
+        "STIF:zone": "4",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Martinière",
+        "public_transport": "platform",
+        "ref:FR:STIF": "11406",
+        "ref:FR:STIF:stop_id": "StopPoint:57:1122",
+        "route_ref": "8",
+        "shelter": "no",
+        "source:wheelchair": "STIF 2019-01",
+        "tactile_paving": "no",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1956671,
+          48.7092535
+        ]
+      },
+      "id": "node/1363114625"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1363114626",
+        "STIF:zone": "4",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Corniche",
+        "public_transport": "platform",
+        "ref:FR:STIF:stop_id": "StopPoint:57:1140",
+        "route_ref": "8",
+        "shelter": "no",
+        "source:wheelchair": "STIF 2019-01",
+        "tactile_paving": "no",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1966005,
+          48.7089897
+        ]
+      },
+      "id": "node/1363114626"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1363114628",
+        "STIF:zone": "4",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Couturier",
+        "public_transport": "platform",
+        "ref:FR:STIF": "11407",
+        "ref:FR:STIF:stop_id": "StopPoint:57:1130",
+        "route_ref": "8",
+        "shelter": "no",
+        "source:wheelchair": "STIF 2019-01",
+        "tactile_paving": "no",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1934409,
+          48.7095473
+        ]
+      },
+      "id": "node/1363114628"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1416447173",
+        "STIF:zone": "5",
+        "bench": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Racine",
+        "public_transport": "platform",
+        "ref:FR:STIF": "11399",
+        "ref:FR:STIF:stop_id": "StopPoint:57:1051",
+        "route_ref": "8;9",
+        "shelter": "no",
+        "source:wheelchair": "STIF 2019-01",
+        "tactile_paving": "no",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1920248,
+          48.7034443
+        ]
+      },
+      "id": "node/1416447173"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1416618379",
+        "STIF:zone": "5",
+        "bench": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Racine",
+        "public_transport": "platform",
+        "ref:FR:STIF": "11398",
+        "ref:FR:STIF:stop_id": "StopPoint:57:1050",
+        "route_ref": "8;9",
+        "shelter": "no",
+        "source:wheelchair": "STIF 2019-01",
+        "tactile_paving": "no",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1914492,
+          48.7028383
+        ]
+      },
+      "id": "node/1416618379"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1416623817",
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Marché d'Orsay",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "tactile_paving": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1880539,
+          48.6999226
+        ]
+      },
+      "id": "node/1416623817"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1416623837",
+        "STIF:zone": "5",
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Mairie - Hôpital - Orsay RER",
+        "public_transport": "platform",
+        "ref:FR:STIF": "11340;26626",
+        "ref:FR:STIF:stop_id": "StopPoint:57:621;StopPoint:59:6673115",
+        "route_ref": "1;8;9;N122",
+        "shelter": "yes",
+        "tactile_paving": "no",
+        "wikidata": "Q56869514"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1876489,
+          48.6987825
+        ]
+      },
+      "id": "node/1416623837"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1420980849",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1973936,
+          48.7040974
+        ]
+      },
+      "id": "node/1420980849"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1420980850",
+        "STIF:zone": "5",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "École du Guichet",
+        "public_transport": "platform",
+        "ref:FR:STIF": "11401",
+        "ref:FR:STIF:stop_id": "StopPoint:57:1071",
+        "route_ref": "8",
+        "shelter": "no",
+        "source:wheelchair": "STIF 2019-01",
+        "tactile_paving": "no",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1953338,
+          48.7055737
+        ]
+      },
+      "id": "node/1420980850"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1420980855",
+        "STIF:zone": "5",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Saint-Laurent",
+        "public_transport": "platform",
+        "ref:FR:STIF": "11395",
+        "ref:FR:STIF:stop_id": "StopPoint:57:1030",
+        "route_ref": "1",
+        "shelter": "yes",
+        "tactile_paving": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1906757,
+          48.6988053
+        ]
+      },
+      "id": "node/1420980855"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1420980857",
+        "STIF:zone": "5",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Fournier",
+        "public_transport": "platform",
+        "ref:FR:STIF": "11402",
+        "ref:FR:STIF:stop_id": "StopPoint:57:1080",
+        "route_ref": "8",
+        "shelter": "no",
+        "source:wheelchair": "STIF 2019-01",
+        "tactile_paving": "no",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1958862,
+          48.7039345
+        ]
+      },
+      "id": "node/1420980857"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1420982408",
+        "STIF:zone": "5",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Versailles",
+        "public_transport": "platform",
+        "ref:FR:STIF": "11412",
+        "ref:FR:STIF:stop_id": "StopPoint:57:1180",
+        "route_ref": "9",
+        "shelter": "no",
+        "source:wheelchair": "STIF 2019-01",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1872627,
+          48.709042
+        ]
+      },
+      "id": "node/1420982408"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1420982413",
+        "STIF:zone": "5",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Versailles",
+        "public_transport": "platform",
+        "ref:FR:STIF": "11413",
+        "ref:FR:STIF:stop_id": "StopPoint:57:1181",
+        "route_ref": "9",
+        "shelter": "yes",
+        "source:wheelchair": "STIF 2019-01",
+        "tactile_paving": "no",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1871664,
+          48.708949
+        ]
+      },
+      "id": "node/1420982413"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1429827410",
+        "STIF:zone": "5",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Buisson",
+        "public_transport": "platform",
+        "ref:FR:STIF": "11409",
+        "ref:FR:STIF:stop_id": "StopPoint:57:1150",
+        "route_ref": "8",
+        "shelter": "no",
+        "source:wheelchair": "STIF 2019-01",
+        "tactile_paving": "no",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1954433,
+          48.70785
+        ]
+      },
+      "id": "node/1429827410"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1429827411",
+        "STIF:zone": "5",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Aristide Briand",
+        "public_transport": "platform",
+        "ref:FR:STIF": "11404",
+        "ref:FR:STIF:stop_id": "StopPoint:57:1101",
+        "route_ref": "8",
+        "shelter": "no",
+        "source:wheelchair": "STIF 2019-01",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1968032,
+          48.7071792
+        ]
+      },
+      "id": "node/1429827411"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1429837475",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "noname": "yes",
+        "public_transport": "platform",
+        "shelter": "no",
+        "tactile_paving": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1951926,
+          48.7065703
+        ]
+      },
+      "id": "node/1429837475"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1617097614",
+        "STIF:zone": "5",
+        "bench": "yes",
+        "bus": "yes",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "name": "République",
+        "operator": "Albatrans",
+        "public_transport": "platform",
+        "ref:FR:STIF": "11341",
+        "ref:FR:STIF:stop_id": "StopPoint:46:14568",
+        "route_ref": "DM10A;1;3;8;9;DM10S;N122",
+        "shelter": "yes",
+        "tactile_paving": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1848111,
+          48.6964596
+        ]
+      },
+      "id": "node/1617097614"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1617097618",
+        "STIF:zone": "5",
+        "bench": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Mairie d'Orsay",
+        "public_transport": "platform",
+        "ref:FR:STIF": "11339",
+        "ref:FR:STIF:stop_id": "StopPoint:57:620",
+        "route_ref": "3;8;9",
+        "shelter": "no",
+        "tactile_paving": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.187161,
+          48.6982113
+        ]
+      },
+      "id": "node/1617097618"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1617112611",
+        "STIF:zone": "5",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Cimetière d'Orsay",
+        "public_transport": "platform",
+        "ref:FR:STIF": "11393",
+        "ref:FR:STIF:stop_id": "StopPoint:57:1011",
+        "route_ref": "S2"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2064234,
+          48.6990013
+        ]
+      },
+      "id": "node/1617112611"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1617112613",
+        "STIF:zone": "5",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Cimetière d'Orsay",
+        "public_transport": "platform",
+        "ref:FR:STIF": "11392",
+        "ref:FR:STIF:stop_id": "StopPoint:57:1010",
+        "route_ref": "1"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2057968,
+          48.6990303
+        ]
+      },
+      "id": "node/1617112613"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1617112615",
+        "STIF:zone": "5",
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Parrat",
+        "public_transport": "platform",
+        "ref:FR:STIF": "11390",
+        "ref:FR:STIF:stop_id": "StopPoint:57:990",
+        "route_ref": "1",
+        "shelter": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1997572,
+          48.6967031
+        ]
+      },
+      "id": "node/1617112615"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1617112624",
+        "STIF:zone": "5",
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Orgeval",
+        "public_transport": "platform",
+        "ref:FR:STIF": "11391",
+        "ref:FR:STIF:stop_id": "StopPoint:57:1000",
+        "route_ref": "1",
+        "shelter": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2032441,
+          48.6977414
+        ]
+      },
+      "id": "node/1617112624"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1617136429",
+        "STIF:zone": "4",
+        "bus": "yes",
+        "flickr": "https://www.flickr.com/photos/145224554@N02/37869262186/",
+        "highway": "bus_stop",
+        "name": "Gare de Lozère RER",
+        "public_transport": "platform",
+        "ref:FR:STIF": "11478",
+        "ref:FR:STIF:stop_id": "StopPoint:57:2500",
+        "route_ref": "19;S2"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2120902,
+          48.7058859
+        ]
+      },
+      "id": "node/1617136429"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1703380043",
+        "STIF:zone": "4",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Polytechnique Lozère",
+        "public_transport": "platform",
+        "ref:FR:STIF": "21836",
+        "ref:FR:STIF:stop_id": "StopPoint:56:11742;StopPoint:57:2023",
+        "route_ref": "14;91-06;91-10",
+        "shelter": "yes",
+        "source": "STIF - 12/2016"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2105384,
+          48.7097838
+        ]
+      },
+      "id": "node/1703380043"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1703380044",
+        "STIF:zone": "4",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Polytechnique Lozère",
+        "public_transport": "platform",
+        "ref:FR:STIF": "21835",
+        "ref:FR:STIF:stop_id": "StopPoint:57:2022;StopPoint:56:11740",
+        "route_ref": "14;91-06;91-10",
+        "shelter": "yes",
+        "source": "STIF - 12/2016"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2098656,
+          48.7099479
+        ]
+      },
+      "id": "node/1703380044"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1718047096",
+        "STIF:zone": "5",
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Gare d'Orsay Ville",
+        "public_transport": "platform",
+        "ref:FR:STIF:stop_id": "StopPoint:56:10539",
+        "route_ref": "91-03",
+        "shelter": "yes",
+        "source:ref:FR:STIF": "opendata STIF - 03/2018",
+        "tactile_paving": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1817114,
+          48.697293
+        ]
+      },
+      "id": "node/1718047096"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1718047097",
+        "STIF:zone": "5",
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Gare d'Orsay Ville",
+        "public_transport": "platform",
+        "ref:FR:STIF": "424593",
+        "ref:FR:STIF:stop_id": "StopPoint:57:603",
+        "route_ref": "1;8",
+        "shelter": "yes",
+        "tactile_paving": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1819176,
+          48.6973043
+        ]
+      },
+      "id": "node/1718047097"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1722770104",
+        "STIF:zone": "5",
+        "bench": "no",
+        "bus": "yes",
+        "covered": "no",
+        "highway": "bus_stop",
+        "name": "Université Paris-Saclay",
+        "public_transport": "platform",
+        "ref:FR:STIF": "11444;10203",
+        "ref:FR:STIF:stop_id": "StopPoint:56:11826;StopPoint:57:1390",
+        "route_ref": "91-08;7",
+        "shelter": "no",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1724107,
+          48.7124123
+        ]
+      },
+      "id": "node/1722770104"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1732826814",
+        "STIF:zone": "5",
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Gare du Guichet RER",
+        "public_transport": "platform",
+        "ref:FR:STIF": "2791",
+        "ref:FR:STIF:stop_id": "StopPoint:56:10537",
+        "route_ref": "91-02;91-08",
+        "shelter": "yes",
+        "source:wheelchair": "STIF 2019-01",
+        "tactile_paving": "no",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1911319,
+          48.7068115
+        ]
+      },
+      "id": "node/1732826814"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1732826824",
+        "STIF:zone": "5",
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Gare du Guichet",
+        "public_transport": "platform",
+        "ref:FR:STIF": "11414",
+        "ref:FR:STIF:stop_id": "StopPoint:57:1190",
+        "route_ref": "9",
+        "shelter": "yes",
+        "source:wheelchair": "STIF 2019-01",
+        "tactile_paving": "no",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1913701,
+          48.7065075
+        ]
+      },
+      "id": "node/1732826824"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1732826828",
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Gare du Guichet RER",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "tactile_paving": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1912319,
+          48.7066527
+        ]
+      },
+      "id": "node/1732826828"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1732826840",
+        "STIF:zone": "5",
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Gare du Guichet RER",
+        "public_transport": "platform",
+        "ref:FR:STIF": "2791",
+        "ref:FR:STIF:stop_id": "StopPoint:56:10536",
+        "route_ref": "91-02;91-08",
+        "shelter": "yes",
+        "source:wheelchair": "STIF 2019-01",
+        "tactile_paving": "no",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1915549,
+          48.706364
+        ]
+      },
+      "id": "node/1732826840"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1855952971",
+        "STIF:zone": "5",
+        "bench": "no",
+        "bus": "yes",
+        "covered": "no",
+        "highway": "bus_stop",
+        "name": "Bois des Rames",
+        "public_transport": "platform",
+        "ref:FR:STIF": "11434",
+        "ref:FR:STIF:stop_id": "StopPoint:57:1310",
+        "route_ref": "7",
+        "shelter": "no",
+        "source:wheelchair": "STIF 2019-01",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1807687,
+          48.7069277
+        ]
+      },
+      "id": "node/1855952971"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1855952972",
+        "STIF:zone": "5",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "mapillary": "lhZ8hbChMlNmswVWaCarCg",
+        "name": "De Broglie",
+        "pole": "yes",
+        "public_transport": "platform",
+        "ref:FR:STIF": "11451",
+        "ref:FR:STIF:stop_id": "StopPoint:57:1491",
+        "route_ref": "7",
+        "shelter": "no",
+        "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2012",
+        "source:wheelchair": "STIF 2019-01",
+        "survey:date": "2016-09-29",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.175642,
+          48.7078633
+        ]
+      },
+      "id": "node/1855952972"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1913981940",
+        "STIF:zone": "4",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Groupe Scolaire Jean Macé",
+        "public_transport": "platform",
+        "ref:FR:STIF": "21846",
+        "ref:FR:STIF:stop_id": "StopPoint:57:3321",
+        "route_ref": "1",
+        "shelter": "no",
+        "tactile_paving": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2177686,
+          48.7041282
+        ]
+      },
+      "id": "node/1913981940"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1913981943",
+        "STIF:zone": "4",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Groupe Scolaire Jean Macé",
+        "public_transport": "platform",
+        "ref:FR:STIF": "21845",
+        "ref:FR:STIF:stop_id": "StopPoint:57:3320",
+        "route_ref": "1",
+        "shelter": "no",
+        "tactile_paving": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2178073,
+          48.7041971
+        ]
+      },
+      "id": "node/1913981943"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1918601874",
+        "STIF:zone": "4",
+        "bus": "yes",
+        "flickr": "https://www.flickr.com/photos/145224554@N02/24071550548/",
+        "highway": "bus_stop",
+        "name": "Gare de Lozère RER",
+        "public_transport": "platform",
+        "ref:FR:STIF": "420163",
+        "ref:FR:STIF:stop_id": "StopPoint:57:2502",
+        "route_ref": "1",
+        "shelter": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2120217,
+          48.7058975
+        ]
+      },
+      "id": "node/1918601874"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1932103472",
+        "STIF:zone": "5",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Ruisseau",
+        "public_transport": "platform",
+        "ref:FR:STIF": "11394",
+        "ref:FR:STIF:stop_id": "StopPoint:57:1020",
+        "route_ref": "1"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1994978,
+          48.6989277
+        ]
+      },
+      "id": "node/1932103472"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1935234845",
+        "STIF:zone": "5",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "mapillary": "6oQDfyEb-86-kqASemwmGA",
+        "name": "Chartres",
+        "pole": "yes",
+        "public_transport": "platform",
+        "ref:FR:STIF": "11387",
+        "ref:FR:STIF:stop_id": "StopPoint:57:940",
+        "route_ref": "1;8",
+        "shelter": "no",
+        "survey:date": "2016-09-25"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1793487,
+          48.6955388
+        ]
+      },
+      "id": "node/1935234845"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3029488893",
+        "STIF:zone": "4",
+        "bench": "yes",
+        "bin": "yes",
+        "bus": "yes",
+        "fixme": "arrets bus en doublon des 2 cotes rue",
+        "highway": "bus_stop",
+        "name": "Place des Suisses",
+        "public_transport": "platform",
+        "ref:FR:STIF": "11482",
+        "ref:FR:STIF:stop_id": "StopPoint:57:2531",
+        "route_ref": "S4;19;S1;S2",
+        "shelter": "yes",
+        "tactile_paving": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2144483,
+          48.7000299
+        ]
+      },
+      "id": "node/3029488893"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3029488894",
+        "STIF:zone": "4",
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Place des Suisses",
+        "public_transport": "platform",
+        "ref:FR:STIF": "11481",
+        "ref:FR:STIF:stop_id": "StopPoint:57:2530",
+        "route_ref": "S4;19;S1;S2",
+        "shelter": "yes",
+        "tactile_paving": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2146777,
+          48.69991
+        ]
+      },
+      "id": "node/3029488894"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3822865265",
+        "STIF:zone": "5",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "IHES",
+        "public_transport": "platform",
+        "ref:FR:STIF": "11350",
+        "ref:FR:STIF:stop_id": "StopPoint:57:680",
+        "route_ref": "4;5",
+        "source:wheelchair": "STIF 2019-01",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1658493,
+          48.6941302
+        ]
+      },
+      "id": "node/3822865265"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3822876679",
+        "STIF:zone": "5",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "mapillary": "2zf5X2j7Ocq9wwSJN8ZHxQ",
+        "name": "Dimancherie",
+        "pole": "yes",
+        "public_transport": "platform",
+        "ref:FR:STIF": "11386",
+        "ref:FR:STIF:stop_id": "StopPoint:57:931",
+        "route_ref": "8",
+        "shelter": "no",
+        "survey:date": "2016-09-25",
+        "tactile_paving": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1763149,
+          48.6949895
+        ]
+      },
+      "id": "node/3822876679"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3833357079",
+        "STIF:zone": "5",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Châteaufort",
+        "public_transport": "platform",
+        "ref:FR:STIF:stop_id": "StopPoint:57:1110",
+        "route_ref": "8",
+        "source:wheelchair": "STIF 2019-01",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1988683,
+          48.7081633
+        ]
+      },
+      "id": "node/3833357079"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3842587705",
+        "STIF:zone": "5",
+        "bench": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Aristide Briand",
+        "public_transport": "platform",
+        "ref:FR:STIF:stop_id": "StopPoint:57:1100",
+        "route_ref": "8",
+        "shelter": "no",
+        "source:wheelchair": "STIF 2019-01",
+        "tactile_paving": "no",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1986628,
+          48.706969
+        ]
+      },
+      "id": "node/3842587705"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3842669990",
+        "STIF:zone": "5",
+        "bus": "yes",
+        "fixme": "pas d'arrêt de bus",
+        "highway": "bus_stop",
+        "name": "Cimetière d'Orsay",
+        "public_transport": "platform",
+        "ref:FR:STIF": "21828",
+        "ref:FR:STIF:stop_id": "StopPoint:57:1012",
+        "route_ref": "1;S1;S2"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2066774,
+          48.6986965
+        ]
+      },
+      "id": "node/3842669990"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3842669993",
+        "STIF:zone": "5",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Conservatoire",
+        "public_transport": "platform",
+        "ref:FR:STIF": "11388",
+        "ref:FR:STIF:stop_id": "StopPoint:57:960",
+        "route_ref": "1;S1"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1902739,
+          48.6964619
+        ]
+      },
+      "id": "node/3842669993"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3842669997",
+        "STIF:zone": "5",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "mapillary": "7PkGAg06vtXSbe6H4PFovw",
+        "name": "Lycée Blaise Pascal",
+        "pole": "yes",
+        "public_transport": "platform",
+        "ref:FR:STIF": "21860",
+        "ref:FR:STIF:stop_id": "StopPoint:57:3410",
+        "route_ref": "1",
+        "shelter": "no",
+        "survey:date": "2016-09-23",
+        "tactile_paving": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1871309,
+          48.6968147
+        ]
+      },
+      "id": "node/3842669997"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3842670001",
+        "STIF:zone": "5",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Résidence de l'Yvette",
+        "public_transport": "platform",
+        "ref:FR:STIF": "21859",
+        "ref:FR:STIF:stop_id": "StopPoint:57:3400",
+        "route_ref": "1",
+        "shelter": "no",
+        "tactile_paving": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1955653,
+          48.6988641
+        ]
+      },
+      "id": "node/3842670001"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3980845786",
+        "STIF:zone": "5",
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Joliot-Curie",
+        "public_transport": "platform",
+        "ref:FR:STIF": "424605",
+        "ref:FR:STIF:stop_id": "StopPoint:57:1422;StopPoint:56:11891",
+        "route_ref": "9;91-06;91-10",
+        "shelter": "yes",
+        "source:wheelchair": "STIF 2019-01",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1622259,
+          48.7110573
+        ]
+      },
+      "id": "node/3980845786"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4096918910",
+        "STIF:zone": "5",
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Université Paris-Saclay",
+        "public_transport": "platform",
+        "ref:FR:STIF": "420714",
+        "ref:FR:STIF:stop_id": "StopPoint:57:2222;StopPoint:56:11887",
+        "route_ref": "9;91-06;91-10",
+        "shelter": "yes",
+        "source:wheelchair": "STIF 2019-01",
+        "tactile_paving": "yes",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1714596,
+          48.7119344
+        ]
+      },
+      "id": "node/4096918910"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4118719912",
+        "STIF:zone": "4",
+        "bench": "yes",
+        "bin": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Fresnel - Vauve",
+        "public_transport": "platform",
+        "ref:FR:STIF": "425036",
+        "ref:FR:STIF:stop_id": "StopPoint:57:1992",
+        "route_ref": "14;91-08",
+        "shelter": "yes",
+        "source:wheelchair": "STIF 2019-01",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2023924,
+          48.7161446
+        ]
+      },
+      "id": "node/4118719912"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4326886630",
+        "STIF:zone": "5",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Collège Guyonnerie",
+        "opening_hours": "Su 08:00-15:00",
+        "public_transport": "platform",
+        "ref:FR:STIF": "5028",
+        "ref:FR:STIF:stop_id": "StopPoint:57:10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1568268,
+          48.7010455
+        ]
+      },
+      "id": "node/4326886630"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4326886631",
+        "bench": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Collège Guyonnerie",
+        "public_transport": "platform",
+        "shelter": "no",
+        "tactile_paving": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1567736,
+          48.7008682
+        ]
+      },
+      "id": "node/4326886631"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5179952997",
+        "STIF:zone": "5",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "8 Mai 1945",
+        "public_transport": "platform",
+        "ref:FR:STIF": "11475",
+        "route_ref": "4;20",
+        "shelter": "yes",
+        "source:wheelchair": "STIF 2019-01",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1702352,
+          48.6956788
+        ]
+      },
+      "id": "node/5179952997"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5218285289",
+        "STIF:zone": "5",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Gare d'Orsay RER",
+        "public_transport": "platform",
+        "ref:FR:STIF": "3303",
+        "ref:FR:STIF:stop_id": "StopPoint:46:10538",
+        "route_ref": "DM10A",
+        "shelter": "no",
+        "tactile_paving": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1832497,
+          48.6977466
+        ]
+      },
+      "id": "node/5218285289"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5219485874",
+        "STIF:zone": "5",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Gare de Bures-sur-Yvette",
+        "public_transport": "platform",
+        "ref:FR:STIF:stop_id": "StopPoint:57:23",
+        "route_ref": "4"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1631925,
+          48.6951933
+        ]
+      },
+      "id": "node/5219485874"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5233528415",
+        "STIF:zone": "4",
+        "bus": "yes",
+        "flickr": "https://www.flickr.com/photos/145224554@N02/37869262186/",
+        "highway": "bus_stop",
+        "name": "Gare de Lozère RER",
+        "public_transport": "platform",
+        "ref:FR:STIF": "21841",
+        "ref:FR:STIF:stop_id": "StopPoint:57:2501",
+        "route_ref": "1",
+        "shelter": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2118277,
+          48.7058191
+        ]
+      },
+      "id": "node/5233528415"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5233528416",
+        "STIF:zone": "4",
+        "bench": "yes",
+        "bus": "yes",
+        "fixme": "arrets bus en doublon des 2 cotes rue",
+        "highway": "bus_stop",
+        "name": "Les Suisses - Lozère RER",
+        "public_transport": "platform",
+        "ref:FR:STIF": "11481",
+        "ref:FR:STIF:stop_id": "StopPoint:59:4473134",
+        "route_ref": "N122",
+        "shelter": "yes",
+        "tactile_paving": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.214529,
+          48.6999167
+        ]
+      },
+      "id": "node/5233528416"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5233528417",
+        "STIF:zone": "4",
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Les Suisses - Lozère RER",
+        "public_transport": "platform",
+        "ref:FR:STIF": "11482",
+        "ref:FR:STIF:stop_id": "StopPoint:59:4473135",
+        "route_ref": "N122",
+        "shelter": "yes",
+        "tactile_paving": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2143936,
+          48.7000487
+        ]
+      },
+      "id": "node/5233528417"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5233528418",
+        "STIF:zone": "4",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Général De Gaulle",
+        "public_transport": "platform",
+        "ref:FR:STIF": "11479",
+        "ref:FR:STIF:stop_id": "StopPoint:57:2520",
+        "route_ref": "19;S1;S2;S4"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2105929,
+          48.6994671
+        ]
+      },
+      "id": "node/5233528418"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5237163546",
+        "STIF:zone": "5",
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Gare d'Orsay Ville",
+        "public_transport": "platform",
+        "ref:FR:STIF": "12422;420199",
+        "ref:FR:STIF:stop_id": "StopPoint:57:600",
+        "route_ref": "3",
+        "shelter": "yes",
+        "tactile_paving": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1816223,
+          48.697296
+        ]
+      },
+      "id": "node/5237163546"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5444780495",
+        "STIF:zone": "5",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Bures - Amphi",
+        "public_transport": "platform",
+        "ref:FR:STIF": "11427",
+        "ref:FR:STIF:stop_id": "StopPoint:57:1271",
+        "route_ref": "6"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1672991,
+          48.7018529
+        ]
+      },
+      "id": "node/5444780495"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5444780496",
+        "STIF:zone": "5",
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "L'Isles",
+        "public_transport": "platform",
+        "ref:FR:STIF": "11429",
+        "ref:FR:STIF:stop_id": "StopPoint:57:1281",
+        "route_ref": "6",
+        "shelter": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.164776,
+          48.6994744
+        ]
+      },
+      "id": "node/5444780496"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5444780497",
+        "STIF:zone": "5",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Georges Poitou",
+        "public_transport": "platform",
+        "ref:FR:STIF": "11422",
+        "ref:FR:STIF:stop_id": "StopPoint:57:1250",
+        "route_ref": "6"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1744667,
+          48.7035179
+        ]
+      },
+      "id": "node/5444780497"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5444780498",
+        "STIF:zone": "5",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Château",
+        "public_transport": "platform",
+        "ref:FR:STIF": "11418",
+        "ref:FR:STIF:stop_id": "StopPoint:57:1230",
+        "route_ref": "6;7",
+        "source:wheelchair": "STIF 2019-01",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1801816,
+          48.7013999
+        ]
+      },
+      "id": "node/5444780498"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5444780499",
+        "STIF:zone": "5",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Bures - Amphi",
+        "public_transport": "platform",
+        "ref:FR:STIF": "11426",
+        "ref:FR:STIF:stop_id": "StopPoint:57:1270",
+        "route_ref": "6"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1668293,
+          48.7017552
+        ]
+      },
+      "id": "node/5444780499"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5444780500",
+        "STIF:zone": "5",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Bibliothèque",
+        "public_transport": "platform",
+        "ref:FR:STIF": "11421",
+        "ref:FR:STIF:stop_id": "StopPoint:57:1241",
+        "route_ref": "6",
+        "shelter": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.177506,
+          48.7031367
+        ]
+      },
+      "id": "node/5444780500"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5444780502",
+        "STIF:zone": "5",
+        "bench": "yes",
+        "bus": "yes",
+        "covered": "yes",
+        "highway": "bus_stop",
+        "name": "Verger",
+        "public_transport": "platform",
+        "ref:FR:STIF": "11424",
+        "ref:FR:STIF:stop_id": "StopPoint:57:1260",
+        "route_ref": "6",
+        "shelter": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1730724,
+          48.702133
+        ]
+      },
+      "id": "node/5444780502"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5444780503",
+        "STIF:zone": "5",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Bibliothèque",
+        "public_transport": "platform",
+        "ref:FR:STIF": "11420",
+        "ref:FR:STIF:stop_id": "StopPoint:57:1240",
+        "route_ref": "6",
+        "shelter": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1775141,
+          48.7031933
+        ]
+      },
+      "id": "node/5444780503"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5444780504",
+        "STIF:zone": "5",
+        "bench": "yes",
+        "bus": "yes",
+        "covered": "yes",
+        "highway": "bus_stop",
+        "name": "Verger",
+        "public_transport": "platform",
+        "ref:FR:STIF": "11425",
+        "ref:FR:STIF:stop_id": "StopPoint:57:1261",
+        "route_ref": "6",
+        "shelter": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1732414,
+          48.7020144
+        ]
+      },
+      "id": "node/5444780504"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5444780505",
+        "STIF:zone": "5",
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "L'Isles",
+        "public_transport": "platform",
+        "ref:FR:STIF": "11428",
+        "ref:FR:STIF:stop_id": "StopPoint:57:1280",
+        "route_ref": "6",
+        "shelter": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1647085,
+          48.6995613
+        ]
+      },
+      "id": "node/5444780505"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5444780506",
+        "STIF:zone": "5",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Jean Monnet",
+        "public_transport": "platform",
+        "ref:FR:STIF": "11430",
+        "ref:FR:STIF:stop_id": "StopPoint:57:1290",
+        "route_ref": "6"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1675006,
+          48.6993506
+        ]
+      },
+      "id": "node/5444780506"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5444780507",
+        "STIF:zone": "5",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Georges Poitou",
+        "public_transport": "platform",
+        "ref:FR:STIF": "11423",
+        "ref:FR:STIF:stop_id": "StopPoint:57:1251",
+        "route_ref": "6"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.174489,
+          48.7034534
+        ]
+      },
+      "id": "node/5444780507"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5444780508",
+        "STIF:zone": "5",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Château",
+        "public_transport": "platform",
+        "ref:FR:STIF": "11419",
+        "ref:FR:STIF:stop_id": "StopPoint:57:1231",
+        "route_ref": "6;7",
+        "source:wheelchair": "STIF 2019-01",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1801059,
+          48.7013536
+        ]
+      },
+      "id": "node/5444780508"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5445525698",
+        "STIF:zone": "4",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Général De Gaulle",
+        "public_transport": "platform",
+        "ref:FR:STIF": "11480",
+        "ref:FR:STIF:stop_id": "StopPoint:57:2521",
+        "route_ref": "18;19;S1;S2;S4"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2105355,
+          48.6995419
+        ]
+      },
+      "id": "node/5445525698"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5445578743",
+        "STIF:zone": "4",
+        "bench": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Stade de Rugby",
+        "public_transport": "platform",
+        "ref:FR:STIF": "21861",
+        "ref:FR:STIF:stop_id": "StopPoint:57:3420",
+        "route_ref": "1;19;S2",
+        "shelter": "no",
+        "tactile_paving": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2099777,
+          48.7021308
+        ]
+      },
+      "id": "node/5445578743"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5445578744",
+        "STIF:zone": "4",
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Stade de Rugby - Poincaré",
+        "public_transport": "platform",
+        "ref:FR:STIF": "21862",
+        "ref:FR:STIF:stop_id": "StopPoint:57:3421",
+        "route_ref": "1;19",
+        "shelter": "yes",
+        "tactile_paving": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2097786,
+          48.7019101
+        ]
+      },
+      "id": "node/5445578744"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5526835994",
+        "STIF:zone": "5",
+        "bench": "yes",
+        "bus": "yes",
+        "description": "quai de dépose",
+        "exit": "only",
+        "highway": "bus_stop",
+        "name": "Gare d'Orsay Ville",
+        "public_transport": "platform",
+        "ref:FR:STIF": "420199",
+        "ref:FR:STIF:stop_id": "StopPoint:57:601",
+        "route_ref": "1;3;5;8",
+        "shelter": "yes",
+        "tactile_paving": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1821855,
+          48.6974339
+        ]
+      },
+      "id": "node/5526835994"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5703148938",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Rue de l'Avenir",
+        "public_transport": "platform",
+        "route_ref": "S4",
+        "school": "only",
+        "shelter": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2075503,
+          48.6972521
+        ]
+      },
+      "id": "node/5703148938"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5704511733",
+        "STIF:zone": "5",
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Gare d'Orsay Ville",
+        "public_transport": "platform",
+        "ref:FR:STIF": "424592",
+        "ref:FR:STIF:stop_id": "StopPoint:57:602",
+        "route_ref": "5",
+        "shelter": "yes",
+        "tactile_paving": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1818056,
+          48.697299
+        ]
+      },
+      "id": "node/5704511733"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5762436116",
+        "STIF:zone": "5",
+        "bench": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Bures-sur-Yvette RER - Université",
+        "public_transport": "platform",
+        "ref:FR:STIF": "420168",
+        "ref:FR:STIF:stop_id": "StopPoint:57:530",
+        "route_ref": "N122;4;20",
+        "shelter": "no",
+        "source:wheelchair": "STIF 2019-01",
+        "tactile_paving": "no",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1633645,
+          48.698942
+        ]
+      },
+      "id": "node/5762436116"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5905118351",
+        "STIF:zone": "5",
+        "alt_name": "CEA Sud",
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Mare du Vivier - CEA Porte Sud",
+        "public_transport": "platform",
+        "ref:FR:STIF": "422964;420702;424600",
+        "ref:FR:STIF:stop_id": "StopPoint:24:15335;StopPoint:56:11898;StopPoint:57:2233",
+        "route_ref": "9;10;91-06;91-10",
+        "shelter": "yes",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1509682,
+          48.7186829
+        ]
+      },
+      "id": "node/5905118351"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5905122813",
+        "STIF:zone": "5",
+        "bench": "no",
+        "bus": "yes",
+        "covered": "no",
+        "highway": "bus_stop",
+        "name": "Grand Mesnil",
+        "public_transport": "platform",
+        "ref:FR:STIF": "4841;11356",
+        "ref:FR:STIF:stop_id": "StopPoint:24:14758;StopPoint:57:711",
+        "route_ref": "5;39-07",
+        "shelter": "no",
+        "source:ref:FR:STIF": "opendata STIF - 03/2018",
+        "source:wheelchair": "STIF 2018-07",
+        "tactile_paving": "yes",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1727314,
+          48.6951874
+        ]
+      },
+      "id": "node/5905122813"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5905123660",
+        "STIF:zone": "5",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "mapillary": "cV-ltISMumYUBCxnbnHmUA",
+        "name": "La Croix",
+        "public_transport": "platform",
+        "ref:FR:STIF": "4678",
+        "ref:FR:STIF:stop_id": "StopPoint:24:8797",
+        "route_ref": "39-07",
+        "survey:date": "2016-10-02",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1631747,
+          48.6940242
+        ]
+      },
+      "id": "node/5905123660"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5905124593",
+        "STIF:zone": "5",
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Gare d'Orsay Ville",
+        "public_transport": "platform",
+        "ref:FR:STIF": "2792",
+        "ref:FR:STIF:stop_id": "StopPoint:24:10538;StopPoint:24:10539",
+        "route_ref": "39-07",
+        "shelter": "yes",
+        "source:wheelchair": "STIF 2018-07",
+        "tactile_paving": "no",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1818754,
+          48.6972747
+        ]
+      },
+      "id": "node/5905124593"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5905124611",
+        "STIF:zone": "5",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "La Croix",
+        "public_transport": "platform",
+        "ref:FR:STIF": "4679",
+        "ref:FR:STIF:stop_id": "StopPoint:24:8798",
+        "route_ref": "39-07",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1639783,
+          48.694275
+        ]
+      },
+      "id": "node/5905124611"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5905124633",
+        "STIF:zone": "5",
+        "alt_name": "CEA Sud",
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Mare du Vivier - CEA Porte Sud",
+        "public_transport": "platform",
+        "ref:FR:STIF": "422963;420705;424602",
+        "ref:FR:STIF:stop_id": "StopPoint:24:15334;StopPoint:56:11897;StopPoint:57:2232",
+        "route_ref": "9;10;91-06;91-10",
+        "shelter": "yes",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1511882,
+          48.7187653
+        ]
+      },
+      "id": "node/5905124633"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5905125013",
+        "STIF:zone": "5",
+        "bench": "no",
+        "bus": "yes",
+        "covered": "no",
+        "highway": "bus_stop",
+        "name": "Grand Mesnil",
+        "public_transport": "platform",
+        "ref:FR:STIF": "415273;11355",
+        "ref:FR:STIF:stop_id": "StopPoint:24:15216;StopPoint:57:710",
+        "route_ref": "5;39-07",
+        "shelter": "no",
+        "source:ref:FR:STIF": "opendata STIF - 03/2018",
+        "source:wheelchair": "STIF 2018-07",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1738334,
+          48.6955221
+        ]
+      },
+      "id": "node/5905125013"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6166070861",
+        "STIF:zone": "5",
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Bures-sur-Yvette RER - Université",
+        "public_transport": "platform",
+        "ref:FR:STIF": "420167",
+        "ref:FR:STIF:stop_id": "StopPoint:57:531",
+        "route_ref": "N122;4;20",
+        "shelter": "yes",
+        "source:wheelchair": "STIF 2019-01",
+        "tactile_paving": "yes",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1638302,
+          48.6987666
+        ]
+      },
+      "id": "node/6166070861"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6414348110",
+        "STIF:zone": "5",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Bures-sur-Yvette RER - La Croix",
+        "public_transport": "platform",
+        "ref:FR:STIF": "462206",
+        "ref:FR:STIF:stop_id": "StopPoint:57:25",
+        "route_ref": "4",
+        "source:wheelchair": "STIF 2019-01",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1631586,
+          48.6940207
+        ]
+      },
+      "id": "node/6414348110"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6414348111",
+        "STIF:zone": "5",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Bures-sur-Yvette RER - La Croix",
+        "public_transport": "platform",
+        "ref:FR:STIF": "462207",
+        "ref:FR:STIF:stop_id": "StopPoint:57:24",
+        "route_ref": "4;20",
+        "source:wheelchair": "STIF 2019-01",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.163967,
+          48.6942696
+        ]
+      },
+      "id": "node/6414348111"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6414348112",
+        "STIF:zone": "5",
+        "bench": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Collège Guyonnerie",
+        "public_transport": "platform",
+        "ref:FR:STIF": "5029",
+        "ref:FR:STIF:stop_id": "StopPoint:57:12",
+        "route_ref": "4",
+        "shelter": "no",
+        "source:wheelchair": "STIF 2019-01",
+        "tactile_paving": "yes",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1568318,
+          48.7011056
+        ]
+      },
+      "id": "node/6414348112"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6414402742",
+        "STIF:zone": "5",
+        "bench": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Lieu de Vie",
+        "public_transport": "platform",
+        "ref:FR:STIF": "474375",
+        "route_ref": "7;11",
+        "shelter": "yes",
+        "source:wheelchair": "STIF 2019-01",
+        "tactile_paving": "no",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1725104,
+          48.7093983
+        ]
+      },
+      "id": "node/6414402742"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6414402744",
+        "STIF:zone": "5",
+        "bench": "no",
+        "bus": "yes",
+        "covered": "no",
+        "highway": "bus_stop",
+        "name": "Université Paris-Saclay",
+        "public_transport": "platform",
+        "ref:FR:STIF": "11444;10203",
+        "ref:FR:STIF:stop_id": "StopPoint:56:11825;StopPoint:57:1391",
+        "route_ref": "91-08;7",
+        "shelter": "no",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1725333,
+          48.7124575
+        ]
+      },
+      "id": "node/6414402744"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6414402745",
+        "STIF:zone": "5",
+        "bench": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Lieu de Vie",
+        "public_transport": "platform",
+        "ref:FR:STIF": "40826",
+        "ref:FR:STIF:stop_id": "StopPoint:57:61500",
+        "route_ref": "7;11",
+        "shelter": "yes",
+        "source:wheelchair": "STIF 2019-01",
+        "tactile_paving": "no",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1726334,
+          48.7090475
+        ]
+      },
+      "id": "node/6414402745"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6414402746",
+        "STIF:zone": "5",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "De Broglie",
+        "public_transport": "platform",
+        "ref:FR:STIF": "11450",
+        "ref:FR:STIF:stop_id": "StopPoint:57:1490",
+        "route_ref": "7;11",
+        "shelter": "no",
+        "source:wheelchair": "STIF 2019-01",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1759624,
+          48.7079337
+        ]
+      },
+      "id": "node/6414402746"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6414402747",
+        "STIF:zone": "5",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Launay",
+        "public_transport": "platform",
+        "ref:FR:STIF": "11432",
+        "ref:FR:STIF:stop_id": "StopPoint:57:1300",
+        "route_ref": "7",
+        "shelter": "yes",
+        "source:wheelchair": "STIF 2019-01",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1812148,
+          48.7027785
+        ]
+      },
+      "id": "node/6414402747"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6451425148",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Parc Orsay Université",
+        "network": "11",
+        "public_transport": "platform",
+        "shelter": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1771863,
+          48.7095501
+        ]
+      },
+      "id": "node/6451425148"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6451425149",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Parc Orsay Université",
+        "network": "11",
+        "public_transport": "platform",
+        "shelter": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1776624,
+          48.7093893
+        ]
+      },
+      "id": "node/6451425149"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6451425150",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "CentraleSupélec",
+        "operator": "SAVAC",
+        "public_transport": "platform",
+        "shelter": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1667143,
+          48.7097547
+        ]
+      },
+      "id": "node/6451425150"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6451425151",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "CentraleSupélec",
+        "network": "11",
+        "public_transport": "platform",
+        "shelter": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1669172,
+          48.7096558
+        ]
+      },
+      "id": "node/6451425151"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6451425152",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Joliot Curie",
+        "network": "11",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1617638,
+          48.7099573
+        ]
+      },
+      "id": "node/6451425152"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6451425153",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Joliot Curie",
+        "network": "11",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.161694,
+          48.7099502
+        ]
+      },
+      "id": "node/6451425153"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6551894422",
+        "STIF:zone": "4",
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Palaiseau - Campus",
+        "public_transport": "platform",
+        "ref:FR:STIF": "420710",
+        "ref:FR:STIF:stop_id": "StopPoint:56:11886",
+        "route_ref": "91-06;91-10",
+        "shelter": "yes",
+        "source:wheelchair": "STIF 2019-01",
+        "tactile_paving": "yes",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1979665,
+          48.7149784
+        ]
+      },
+      "id": "node/6551894422"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6551894423",
+        "STIF:zone": "5",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Corbeville",
+        "public_transport": "platform",
+        "ref:FR:STIF": "420692",
+        "ref:FR:STIF:stop_id": "StopPoint:56:11902",
+        "route_ref": "91-10;91-06;91-08",
+        "shelter": "yes",
+        "source:wheelchair": "STIF 2019-01",
+        "tactile_paving": "yes",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1911279,
+          48.7134975
+        ]
+      },
+      "id": "node/6551894423"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6551894424",
+        "STIF:zone": "5",
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Université Paris-Saclay",
+        "public_transport": "platform",
+        "ref:FR:STIF": "424603",
+        "ref:FR:STIF:stop_id": "StopPoint:56:11888;StopPoint:57:2223",
+        "route_ref": "9;91-06;91-10",
+        "shelter": "yes",
+        "source:wheelchair": "STIF 2019-01",
+        "tactile_paving": "yes",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1716058,
+          48.7118307
+        ]
+      },
+      "id": "node/6551894424"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6551894425",
+        "STIF:zone": "5",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Moulon TCSP",
+        "public_transport": "platform",
+        "ref:FR:STIF": "11455",
+        "ref:FR:STIF:stop_id": "StopPoint:56:11890;StopPoint:57:1511",
+        "route_ref": "9;91-06;91-10",
+        "source:wheelchair": "STIF 2019-01",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1663295,
+          48.7119061
+        ]
+      },
+      "id": "node/6551894425"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6551894444",
+        "STIF:zone": "5",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Moulon TCSP",
+        "public_transport": "platform",
+        "ref:FR:STIF": "426342",
+        "ref:FR:STIF:stop_id": "StopPoint:56:11889;StopPoint:57:1510",
+        "route_ref": "9;91-06;91-10",
+        "source:wheelchair": "STIF 2019-01",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1662199,
+          48.711994
+        ]
+      },
+      "id": "node/6551894444"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6551894447",
+        "STIF:zone": "4",
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Palaiseau - Campus",
+        "public_transport": "platform",
+        "ref:FR:STIF": "420713",
+        "ref:FR:STIF:stop_id": "StopPoint:56:11885",
+        "route_ref": "91-06;91-10",
+        "shelter": "yes",
+        "source:wheelchair": "STIF 2019-01",
+        "tactile_paving": "yes",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.197719,
+          48.715071
+        ]
+      },
+      "id": "node/6551894447"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6552378813",
+        "STIF:zone": "5",
+        "bench": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "République",
+        "public_transport": "platform",
+        "ref:FR:STIF": "11342",
+        "ref:FR:STIF:stop_id": "StopPoint:57:631",
+        "route_ref": "9",
+        "shelter": "no",
+        "source:wheelchair": "STIF 2019-01",
+        "tactile_paving": "no",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1841735,
+          48.6960879
+        ]
+      },
+      "id": "node/6552378813"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6552378817",
+        "STIF:zone": "5",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Mûriers",
+        "public_transport": "platform",
+        "ref:FR:STIF": "11411",
+        "ref:FR:STIF:stop_id": "StopPoint:57:1161",
+        "route_ref": "9",
+        "shelter": "yes",
+        "source:wheelchair": "STIF 2019-01",
+        "tactile_paving": "no",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1850641,
+          48.711328
+        ]
+      },
+      "id": "node/6552378817"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6552378820",
+        "STIF:zone": "5",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Joliot-Curie",
+        "public_transport": "platform",
+        "ref:FR:STIF": "420716",
+        "ref:FR:STIF:stop_id": "StopPoint:57:1423;StopPoint:56:11905",
+        "route_ref": "9;91-06;91-10",
+        "source:wheelchair": "STIF 2019-01",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1624716,
+          48.7109622
+        ]
+      },
+      "id": "node/6552378820"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6552971128",
+        "STIF:zone": "4",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Fresnel - Vauve",
+        "public_transport": "platform",
+        "ref:FR:STIF": "421798",
+        "ref:FR:STIF:stop_id": "StopPoint:57:1993",
+        "route_ref": "14;91-08",
+        "source:wheelchair": "STIF 2019-01",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2028104,
+          48.7164451
+        ]
+      },
+      "id": "node/6552971128"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6558738846",
+        "STIF:zone": "5",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "École du Guichet",
+        "public_transport": "platform",
+        "ref:FR:STIF:stop_id": "StopPoint:57:1070",
+        "route_ref": "8",
+        "shelter": "no",
+        "source:wheelchair": "STIF 2019-01",
+        "tactile_paving": "no",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.195446,
+          48.7056263
+        ]
+      },
+      "id": "node/6558738846"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6558738847",
+        "STIF:zone": "5",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Dimancherie",
+        "public_transport": "platform",
+        "ref:FR:STIF": "11385",
+        "ref:FR:STIF:stop_id": "StopPoint:57:930",
+        "route_ref": "8",
+        "shelter": "no",
+        "source:wheelchair": "STIF 2019-01",
+        "survey:date": "2020-03-10",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1764488,
+          48.6951062
+        ]
+      },
+      "id": "node/6558738847"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6920742310",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1698843,
+          48.6993208
+        ]
+      },
+      "id": "node/6920742310"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6938530459",
+        "STIF:zone": "4",
+        "bus": "yes",
+        "end_date": "2021-10",
+        "highway": "bus_stop",
+        "name": "Ferme de la Vauve",
+        "note": "Cet arrêt remplace l'arrêt Polytechnique Laboratoire qui n'est temporairement plus desservi, depuis octobre 2019 et jusqu'à octobre 2021. Source : https://twitter.com/ALBATRANS91/status/1177580013325115392/photo/1",
+        "old_name": "Polytechnique Laboratoire",
+        "public_transport": "platform",
+        "ref:FR:STIF": "478972",
+        "route_ref": "91-06;91-10",
+        "temporary": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2016541,
+          48.7117001
+        ]
+      },
+      "id": "node/6938530459"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6938530460",
+        "STIF:zone": "4",
+        "bus": "yes",
+        "end_date": "2021-10",
+        "highway": "bus_stop",
+        "name": "Ferme de la Vauve",
+        "note": "Cet arrêt remplace l'arrêt Polytechnique Laboratoire qui n'est temporairement plus desservi, depuis octobre 2019 et jusqu'à octobre 2021. Source : https://twitter.com/ALBATRANS91/status/1177580013325115392/photo/1",
+        "old_name": "Polytechnique Laboratoire",
+        "public_transport": "platform",
+        "ref:FR:STIF": "478967",
+        "route_ref": "91-06;91-10",
+        "temporary": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2013049,
+          48.7117285
+        ]
+      },
+      "id": "node/6938530460"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6938530461",
+        "STIF:zone": "4",
+        "bench": "no",
+        "bus": "yes",
+        "end_date": "2021-10",
+        "highway": "bus_stop",
+        "name": "Place Marguerite Perey",
+        "note": "Cet arrêt remplace l'arrêt Fresnel qui n'est temporairement plus desservi, depuis octobre 2019 et jusqu'à octobre 2021. Source : https://twitter.com/ALBATRANS91/status/1177580013325115392/photo/1",
+        "old_name": "Fresnel",
+        "public_transport": "platform",
+        "ref:FR:STIF": "479447",
+        "route_ref": "91-06;91-10",
+        "shelter": "yes",
+        "source:wheelchair": "STIF 2019-01",
+        "tactile_paving": "no",
+        "temporary": "yes",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2007914,
+          48.7147434
+        ]
+      },
+      "id": "node/6938530461"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6938530462",
+        "STIF:zone": "4",
+        "bench": "no",
+        "bus": "yes",
+        "end_date": "2021-10",
+        "highway": "bus_stop",
+        "name": "Place Marguerite Perey",
+        "note": "Cet arrêt remplace l'arrêt Fresnel qui n'est temporairement plus desservi, depuis octobre 2019 et jusqu'à octobre 2021. Source : https://twitter.com/ALBATRANS91/status/1177580013325115392/photo/1",
+        "old_name": "Fresnel",
+        "public_transport": "platform",
+        "ref:FR:STIF": "479443",
+        "route_ref": "91-06;91-10",
+        "shelter": "yes",
+        "source:wheelchair": "STIF 2019-01",
+        "tactile_paving": "no",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2007471,
+          48.7145523
+        ]
+      },
+      "id": "node/6938530462"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7549164885",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Scocard-Joffre",
+        "public_transport": "platform",
+        "shelter": "no",
+        "survey:date": "2020-05-22",
+        "tactile_paving": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.182,
+          48.6936028
+        ]
+      },
+      "id": "node/7549164885"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8522666534",
+        "STIF:zone": "5",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Bois de la Grille Noire",
+        "operator": "Communauté d'Agglomération Paris Saclay",
+        "public_transport": "platform",
+        "ref:FR:STIF": "11389",
+        "ref:FR:STIF:stop_id": "StopPoint:57:980",
+        "route_ref": "1"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1954083,
+          48.6963288
+        ]
+      },
+      "id": "node/8522666534"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8569797851",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1936444,
+          48.7039237
+        ]
+      },
+      "id": "node/8569797851"
+    }
+  ]
+}
