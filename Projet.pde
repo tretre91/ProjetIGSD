@@ -54,10 +54,11 @@ void draw() {
   cam.update();
   workspace.update();
   land.update();
-  railways.update();
-  roads.update();
   buildings.update();
   gpx.update();
+  noLights();
+  roads.update();
+  railways.update();
   hud.update();
 }
 
