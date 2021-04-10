@@ -7,6 +7,7 @@ uniform sampler2D texture;
 uniform bool showHeatmap;
 
 smooth in vec4 vertColor;
+//smooth in vec4 backVertColor;
 smooth in vec4 vertTexCoord;
 smooth in float vertHeat;
 

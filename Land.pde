@@ -5,6 +5,7 @@ public class Land {
   private Map3D map;
   private Poi poi;
   private PShader heatmapShader;
+  private PShader wfHeatmapShader;
   private boolean showHeatmap = true;
   
   /**
@@ -33,26 +34,12 @@ public class Land {
     final int[] indices = {0,1,3,2};
     Map3D.ObjectPoint[] points = new Map3D.ObjectPoint[4];
     // Wireframe shape
+    this.wfHeatmapShader = loadShader("wireframeHeatmapFrag.glsl", "wireframeHeatmapVert.glsl");
+    this.wfHeatmapShader.set("showHeatmap", showHeatmap);
     this.wireFrame = createShape();
     this.wireFrame.beginShape(QUADS);
-    this.wireFrame.noFill();
     this.wireFrame.stroke(#888888);
     this.wireFrame.strokeWeight(0.5f);
-
-    for (float i = -w/2; i < w/2; i += tileSize) {
-      points[0] = this.map.new ObjectPoint(i, -h/2);
-      points[1] = this.map.new ObjectPoint(i + tileSize, -h/2);
-      for (float j = -h/2; j < h/2; j += tileSize) {
-        points[2] = this.map.new ObjectPoint(i, j + tileSize);
-        points[3] = this.map.new ObjectPoint(i + tileSize, j + tileSize);
-        for (int k: indices) {
-          this.wireFrame.vertex(points[k].x, points[k].y, points[k].z);
-        }
-        points[0] = points[2];
-        points[1] = points[3];
-      }
-    }
-    this.wireFrame.endShape();
     
     // Satellite shape
     if (!fileExists(textureFilename)) exit();
@@ -93,6 +80,8 @@ public class Land {
           this.satellite.attrib("heat", minDistances[k]);
           this.satellite.normal(normals[k].x, normals[k].y, normals[k].z);
           this.satellite.vertex(points[k].x, points[k].y, points[k].z, u + texOffsets[k].x, v + texOffsets[k].y);
+          this.wireFrame.attrib("heat", minDistances[k]);
+          this.wireFrame.vertex(points[k].x, points[k].y, points[k].z);
         }
         for (int k = 0; k < 2; k++) {
           points[k] = points[k+2];
@@ -104,6 +93,7 @@ public class Land {
       u += uStep;
     }
     this.satellite.endShape();
+    this.wireFrame.endShape();
     
     // Shapes initial visibility
     this.heatmapShader.set("showHeatmap", showHeatmap);
@@ -114,6 +104,7 @@ public class Land {
   
   public void update() {
     shape(shadow);
+    shader(wfHeatmapShader);
     shape(wireFrame);
     shader(heatmapShader);
     shape(satellite);
@@ -129,6 +120,7 @@ public class Land {
   public void toggleHeatmap() {
     this.showHeatmap = !this.showHeatmap;
     this.heatmapShader.set("showHeatmap", showHeatmap);
+    this.wfHeatmapShader.set("showHeatmap", showHeatmap);
   }
   
 }
