@@ -1,29 +1,7 @@
 /*
   Slightly modified version of Processing core library's texture
-  and light vertex shader, original file can be found here: 
+  and light vertex shader, the original file can be found here: 
   https://github.com/processing/processing/blob/master/core/src/processing/opengl/shaders/TexLightVert.glsl
-  
-  --------------------------------------------------------------
-
-  Part of the Processing project - http://processing.org
-
-  Copyright (c) 2012-15 The Processing Foundation
-  Copyright (c) 2004-12 Ben Fry and Casey Reas
-  Copyright (c) 2001-04 Massachusetts Institute of Technology
-
-  This library is free software; you can redistribute it and/or
-  modify it under the terms of the GNU Lesser General Public
-  License as published by the Free Software Foundation, version 2.1.
-
-  This library is distributed in the hope that it will be useful,
-  but WITHOUT ANY WARRANTY; without even the implied warranty of
-  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-  Lesser General Public License for more details.
-
-  You should have received a copy of the GNU Lesser General
-  Public License along with this library; if not, write to the
-  Free Software Foundation, Inc., 59 Temple Place, Suite 330,
-  Boston, MA  02111-1307  USA
 */
 
 uniform mat4 modelviewMatrix;
@@ -44,7 +22,7 @@ attribute vec4 position;
 attribute vec4 color;
 attribute vec3 normal;
 attribute vec2 texCoord;
-attribute float heat;
+attribute vec4 heat;
 
 attribute vec4 ambient;
 attribute vec4 specular;
@@ -54,7 +32,7 @@ attribute float shininess;
 smooth out vec4 vertColor;
 smooth out vec4 backVertColor;
 smooth out vec4 vertTexCoord;
-smooth out float vertHeat;
+smooth out vec4 vertHeat;
 
 const float zero_float = 0.0;
 const float one_float = 1.0;
@@ -163,5 +141,5 @@ void main() {
   // Calculating texture coordinates, with r and q set both to one
   vertTexCoord = texMatrix * vec4(texCoord, 1.0, 1.0);   
 
-  vertHeat = heat;     
+  vertHeat = heat / 255.0;     
 }

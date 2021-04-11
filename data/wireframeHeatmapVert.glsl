@@ -1,11 +1,11 @@
 uniform mat4 transformMatrix;
 
 attribute vec4 position;
-attribute float heat;
+attribute vec4 heat;
 
-smooth out float vertHeat;
+smooth out vec4 vertHeat;
 
 void main() {
   gl_Position = transformMatrix * position;
-	vertHeat = heat;
+	vertHeat = heat / 255.0;
 }

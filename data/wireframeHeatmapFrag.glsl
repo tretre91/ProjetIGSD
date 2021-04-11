@@ -5,9 +5,8 @@ precision mediump int;
 
 uniform bool showHeatmap;
 
-smooth in float vertHeat;
+smooth in vec4 vertHeat;
 
 void main() {
-	float intensity = showHeatmap ? 1.0 - smoothstep(vertHeat, 0.0, 50.0) : 0.0;
-  gl_FragColor = vec4(intensity / 3.0, intensity, intensity / 3.0, intensity / 2.0);
+  gl_FragColor = showHeatmap ? vertHeat : vec4(0.0);
 }

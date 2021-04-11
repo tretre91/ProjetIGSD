@@ -1,0 +1,423 @@
+{
+  "type": "FeatureCollection",
+  "generator": "overpass-ide",
+  "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
+  "timestamp": "2021-04-11T15:36:57Z",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1345572944",
+        "addr:city": "Orsay",
+        "addr:housenumber": "3",
+        "addr:postcode": "91400",
+        "addr:street": "Place de la République",
+        "amenity": "bank",
+        "atm": "yes",
+        "brand": "BNP Paribas",
+        "brand:wikidata": "Q499707",
+        "brand:wikipedia": "en:BNP Paribas",
+        "name": "BNP Paribas",
+        "opening_hours": "Tu-Fr 09:30-13:00,14:00-17:45; Sa 09:00-13:00,14:00-16:00",
+        "operator": "BNP Paribas",
+        "phone": "+33820820001",
+        "survey:date": "2020-07-23",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1847067,
+          48.6964085
+        ]
+      },
+      "id": "node/1345572944"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1635487793",
+        "amenity": "bank",
+        "atm": "yes",
+        "brand": "CIC",
+        "brand:wikidata": "Q746525",
+        "brand:wikipedia": "en:Crédit Industriel et Commercial",
+        "contact:phone": "+33 169801827",
+        "name": "CIC",
+        "opening_hours": "Tu-Fr 09:00-12:30,14:00-17:15; Th 09:00-12:30,14:30-17:15; Sa 09:00-12:30,13:30-16:00",
+        "operator": "CIC"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1872101,
+          48.697181
+        ]
+      },
+      "id": "node/1635487793"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1635487855",
+        "amenity": "bank",
+        "atm": "yes",
+        "brand": "Crédit du Nord",
+        "brand:wikidata": "Q3006209",
+        "brand:wikipedia": "en:Crédit du Nord",
+        "check_date:opening_hours": "2021-01-10",
+        "name": "Crédit du Nord",
+        "opening_hours": "Tu-Fr 09:00-12:45,14:00-17:30; Sa 09:00-12:45,14:00-16:30",
+        "operator": "Crédit du Nord",
+        "wheelchair": "limited"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1876178,
+          48.6972784
+        ]
+      },
+      "id": "node/1635487855"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1635487933",
+        "amenity": "atm",
+        "operator": "La Poste",
+        "survey:date": "2020-03-14"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1880064,
+          48.6977061
+        ]
+      },
+      "id": "node/1635487933"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1667978049",
+        "amenity": "atm",
+        "operator": "Caisse d'épargne"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1876811,
+          48.6984654
+        ]
+      },
+      "id": "node/1667978049"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1730557789",
+        "amenity": "atm",
+        "operator": "La Banque Postale"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1636816,
+          48.6972069
+        ]
+      },
+      "id": "node/1730557789"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1732857162",
+        "amenity": "atm",
+        "drive_through": "no",
+        "operator": "Société Générale"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1911833,
+          48.704937
+        ]
+      },
+      "id": "node/1732857162"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1800669261",
+        "amenity": "atm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2107675,
+          48.7129831
+        ]
+      },
+      "id": "node/1800669261"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1913981937",
+        "amenity": "atm",
+        "brand": "Société Générale",
+        "level": "0",
+        "name": "Société Générale",
+        "opening_hours": "24/7",
+        "operator": "Société générale",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2122144,
+          48.7057494
+        ]
+      },
+      "id": "node/1913981937"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2719770569",
+        "addr:city": "Orsay",
+        "addr:housenumber": "4ter",
+        "addr:postcode": "91400",
+        "addr:street": "Rue de Paris",
+        "amenity": "bank",
+        "atm": "yes",
+        "brand": "Société Générale",
+        "brand:wikidata": "Q270363",
+        "brand:wikipedia": "en:Société Générale",
+        "contact:phone": "+33 169189200",
+        "name": "Société Générale",
+        "opening_hours": "Tu-Fr 09:00-12:30,13:50-17:45; Th 09:00-12:30,14:50-17:45; Sa 08:50-12:40,13:55-16:30"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1858647,
+          48.696622
+        ]
+      },
+      "id": "node/2719770569"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2721363913",
+        "addr:housenumber": "2",
+        "addr:street": "rue Verrier",
+        "amenity": "bank",
+        "atm": "yes",
+        "brand": "Crédit Agricole",
+        "brand:wikidata": "Q590952",
+        "brand:wikipedia": "fr:Crédit agricole",
+        "contact:email": "orsay@ca-paris.fr",
+        "contact:phone": "+33 164861750",
+        "contact:website": "https://www.ca-paris.fr",
+        "name": "Crédit Agricole",
+        "opening_hours": "Tu-Fr 09:00-12:30,14:00-18:00; Th 09:00-12:30,15:00-18:00; Sa 08:30-13:00,14:00-16:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1868901,
+          48.6979013
+        ]
+      },
+      "id": "node/2721363913"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2820922322",
+        "amenity": "bank",
+        "atm": "yes",
+        "brand": "Caisse d'Épargne",
+        "brand:wikidata": "Q1547738",
+        "brand:wikipedia": "fr:Caisse d'épargne (banque)",
+        "name": "Caisse d'Épargne"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.163313,
+          48.6975832
+        ]
+      },
+      "id": "node/2820922322"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2820922323",
+        "amenity": "bank",
+        "atm": "yes",
+        "brand": "Crédit Mutuel",
+        "brand:wikidata": "Q642627",
+        "brand:wikipedia": "en:Crédit Mutuel",
+        "name": "Crédit Mutuel"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1629514,
+          48.6972959
+        ]
+      },
+      "id": "node/2820922323"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5260475200",
+        "amenity": "bank",
+        "atm": "yes",
+        "brand": "Banque Populaire",
+        "brand:wikidata": "Q846647",
+        "brand:wikipedia": "fr:Banque populaire",
+        "contact:phone": "+33 988989525",
+        "name": "Banque Populaire",
+        "opening_hours": "Tu-Fr 08:45-12:30,13:45-18:00; Th 08:45-12:30,14:45-18:00; Sa 08:45-12:15"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1872831,
+          48.698224
+        ]
+      },
+      "id": "node/5260475200"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5643685784",
+        "amenity": "atm",
+        "operator": "LCL"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1882598,
+          48.7005534
+        ]
+      },
+      "id": "node/5643685784"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6149850131",
+        "amenity": "bank",
+        "atm": "yes",
+        "brand": "BNP Paribas",
+        "brand:wikidata": "Q499707",
+        "brand:wikipedia": "en:BNP Paribas",
+        "name": "BNP Paribas",
+        "operator": "BNP Paribas"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2018504,
+          48.7139817
+        ]
+      },
+      "id": "node/6149850131"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7865266302",
+        "amenity": "atm",
+        "description": "distributeur de snacks"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.186864,
+          48.698951
+        ]
+      },
+      "id": "node/7865266302"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7865266303",
+        "amenity": "atm",
+        "description": "distributeur de boissons"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1868633,
+          48.6989418
+        ]
+      },
+      "id": "node/7865266303"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8309069493",
+        "amenity": "atm",
+        "currency:EUR": "yes",
+        "network": "Banque Populaire",
+        "opening_hours": "24/7",
+        "operator": "Banque Populaire"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1872,
+          48.698228
+        ]
+      },
+      "id": "node/8309069493"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8309069495",
+        "amenity": "atm",
+        "currency:EUR": "yes",
+        "network": "Crédit Agricole",
+        "opening_hours": "24/7",
+        "operator": "Crédit Agricole"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1867773,
+          48.6979539
+        ]
+      },
+      "id": "node/8309069495"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8319371944",
+        "amenity": "atm",
+        "operator": "Société Générale"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1613016,
+          48.7111858
+        ]
+      },
+      "id": "node/8319371944"
+    }
+  ]
+}

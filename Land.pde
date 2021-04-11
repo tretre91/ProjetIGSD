@@ -1,35 +1,50 @@
 public class Land {
-  private PShape shadow;
-  private PShape wireFrame;
-  private PShape satellite;
+  private float landWidth, landHeight;
+  private PShape shadow, wireFrame, satellite;
   private Map3D map;
   private Poi poi;
-  private PShader heatmapShader;
-  private PShader wfHeatmapShader;
+  private PShader heatmapShader, wfHeatmapShader;
   private boolean showHeatmap = true;
   
   /**
   * Returns a Land object.
   * This creates a land object with a wireframe and a textured representation,
   * and a shadow.
+  *
   * @param map Land associated elevation Map3D object
+  * @param textureFilename The filename of the texture to apply to the land
   * @return Land object
   */
   Land(Map3D map, String textureFilename) {
+    this(map, textureFilename, null);
+  }
+  
+  /**
+  * Returns a Land object.
+  * This creates a land object with a wireframe and a textured representation,
+  * a shadow, and a heatmap.
+  *
+  * @param map Land associated elevation Map3D object
+  * @param textureFilename The filename of the texture to apply to the land
+  * @param heatmap A PImage holding the heatmap texture, such texture can be
+  *                generated using the Poi.createHeatmap() method
+  * @return Land object
+  */
+  Land(Map3D map, String textureFilename, PImage heatmap) {
     final float tileSize = 25.0f;
     this.map = map;
-    float w = (float)Map3D.width;
-    float h = (float)Map3D.height;
+    this.landWidth = (float)Map3D.width;
+    this.landHeight = (float)Map3D.height;
     
     // Shadow shape
     this.shadow = createShape();
     this.shadow.beginShape(QUADS);
     this.shadow.fill(0x992F2F2F);
     this.shadow.noStroke();
-    this.shadow.vertex(-w/2, -h/2, -10.0f);
-    this.shadow.vertex(-w/2, h/2, -10.0f);
-    this.shadow.vertex(w/2, h/2, -10.0f);
-    this.shadow.vertex(w/2, -h/2, -10.0f);
+    this.shadow.vertex(-landWidth/2, -landHeight/2, -10.0f);
+    this.shadow.vertex(-landWidth/2, landHeight/2, -10.0f);
+    this.shadow.vertex(landWidth/2, landHeight/2, -10.0f);
+    this.shadow.vertex(landWidth/2, -landHeight/2, -10.0f);
     this.shadow.endShape();
     
     if (!fileExists(textureFilename)) {
@@ -37,6 +52,14 @@ public class Land {
       this.satellite = createShape();
       return;
     }
+    if (heatmap == null) {
+      heatmap = createImage(2, 2, ARGB);
+      heatmap.loadPixels();
+      for (int i = 0; i < heatmap.pixels.length; i++) {
+        heatmap.pixels[i] = color(0, 0, 0, 0);
+      }
+    }
+    heatmap.loadPixels();
     final int[] indices = {0,1,3,2};
     Map3D.ObjectPoint[] points = new Map3D.ObjectPoint[4];
     this.poi = new Poi(this.map);
@@ -44,7 +67,6 @@ public class Land {
     
     // Wireframe shape
     this.wfHeatmapShader = loadShader("wireframeHeatmapFrag.glsl", "wireframeHeatmapVert.glsl");
-    this.wfHeatmapShader.set("showHeatmap", showHeatmap);
     this.wireFrame = createShape();
     this.wireFrame.beginShape(QUADS);
     this.wireFrame.stroke(#888888);
@@ -52,47 +74,41 @@ public class Land {
     
     // Satellite shape
     this.heatmapShader = loadShader("heatmapFrag.glsl", "heatmapVert.glsl");
-    this.heatmapShader.set("showHeatmap", showHeatmap);
     this.satellite = createShape();
     this.satellite.beginShape(QUADS);
     this.satellite.noStroke();
     this.satellite.emissive(0xD0);
     PImage uvmap = loadImage(textureFilename);
     this.satellite.texture(uvmap);
-    final float uStep = (uvmap.width * tileSize) / w;
-    final float vStep = (uvmap.height * tileSize) / h;
+    final float uStep = (uvmap.width * tileSize) / landWidth;
+    final float vStep = (uvmap.height * tileSize) / landHeight;
     float v, u = 0.0f;
     final PVector[] texOffsets = { new PVector(0,0,0), new PVector(uStep,0,0), new PVector(0,vStep,0), new PVector(uStep,vStep,0) };
 
     PVector[] normals = new PVector[4];
-    float[] minDistances = new float[4];
     
-    for (float i = -w/2; i < w/2; i += tileSize) {
-      points[0] = this.map.new ObjectPoint(i, -h/2);
+    for (float i = -landWidth/2; i < landWidth/2; i += tileSize) {
+      points[0] = this.map.new ObjectPoint(i, -landHeight/2);
       normals[0] = points[0].toNormal();
-      minDistances[0] = this.poi.minDist(points[0].toVector(), pointsOfInterest);
-      points[1] = this.map.new ObjectPoint(i + tileSize, -h/2);
+      points[1] = this.map.new ObjectPoint(i + tileSize, -landHeight/2);
       normals[1] = points[1].toNormal();
-      minDistances[1] = this.poi.minDist(points[1].toVector(), pointsOfInterest);
       v = 0.0f;
-      for (float j = -h/2; j < h/2; j += tileSize) {
+      for (float j = -landHeight/2; j < landHeight/2; j += tileSize) {
         points[2] = this.map.new ObjectPoint(i, j + tileSize);
         normals[2] = points[2].toNormal();
-        minDistances[2] = this.poi.minDist(points[2].toVector(), pointsOfInterest);
         points[3] = this.map.new ObjectPoint(i + tileSize, j + tileSize);
         normals[3] = points[3].toNormal();
-        minDistances[3] = this.poi.minDist(points[3].toVector(), pointsOfInterest);
         for (int k: indices) {
-          this.satellite.attrib("heat", minDistances[k]);
+          final color heatColor = heatmap.pixels[pixelIndex(points[k].x, points[k].y, heatmap)];
+          this.satellite.attrib("heat", red(heatColor), green(heatColor), blue(heatColor), alpha(heatColor));
           this.satellite.normal(normals[k].x, normals[k].y, normals[k].z);
           this.satellite.vertex(points[k].x, points[k].y, points[k].z, u + texOffsets[k].x, v + texOffsets[k].y);
-          this.wireFrame.attrib("heat", minDistances[k]);
+          this.wireFrame.attrib("heat", red(heatColor), green(heatColor), blue(heatColor), alpha(heatColor));
           this.wireFrame.vertex(points[k].x, points[k].y, points[k].z);
         }
         for (int k = 0; k < 2; k++) {
           points[k] = points[k+2];
           normals[k] = normals[k+2];
-          minDistances[k] = minDistances[k+2];
         }
         v += vStep;
       }
@@ -102,12 +118,28 @@ public class Land {
     this.wireFrame.endShape();
     
     // Shapes initial visibility
+    this.wfHeatmapShader.set("showHeatmap", showHeatmap);
     this.heatmapShader.set("showHeatmap", showHeatmap);
     this.shadow.setVisible(true);
     this.wireFrame.setVisible(false);
     this.satellite.setVisible(true);
   }
-  
+
+  /**
+   * Maps a point to the corresponding pixel's index in a PImage
+   *
+   * @param x The x coordinate of the object point
+   * @param y The y coordinate of the object point
+   * @param image A PImage
+   * @return The index of the pixel the point would correspond to if the land
+   *         and the image were the same size.
+   */
+  private int pixelIndex(float x, float y, PImage image) {
+    final int imageX = round(map(x, -landWidth/2, landWidth/2, 0, image.width - 1));
+    final int imageY = round(map(y, -landHeight/2, landHeight/2, 0, image.height - 1));
+    return imageX + imageY * image.width;
+  }
+
   /**
    * Draws The land, its shadow and the heatmap(s).
    */

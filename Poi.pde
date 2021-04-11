@@ -1,5 +1,8 @@
 public class Poi {
   private Map3D map;
+  private static final int PRECISION = 20;
+  private static final float RADIUS = 150.0f;
+  private static final float ANGLE_INCREMENT = 2.0*PI/PRECISION;
 
   /**
    * Creates a Poi object.
@@ -13,21 +16,59 @@ public class Poi {
   }
 
   /**
-   * Computes the distance between a point and the closest point in a list.
+   * Creates a heatmap representing the distance from a type of point of interest.
    *
-   * @param p A point defined as a PVector
-   * @param points The list of points we need to compare
-   * @return The minimal distance between p and a point from points, or 10000.0
-   *         if points was empty.
+   * @param colors       An array of colors to be applied for each type of point.
+   *                     The same color can end up being used multiple times if 
+   *                     the number of colors is less than the number of files.
+   * @param geojsonFiles The name of the GeoJSON files containing the points of 
+   *                     interest we want to represent, one or multiple files can
+   *                     be specified.
    */
-  public float minDist(PVector p, ArrayList<PVector> points) {
-    float min = 10000.0f;
-    for (PVector v: points) {
-      float distance = dist(p.x, p.y, p.z, v.x, v.y, v.z);
-      if (distance < min)
-        min = distance;
+  public void createHeatmap(color[] colors, String... geojsonFiles) {
+    if (colors.length == 0) {
+      colors = new color[1];
+      colors[0] = color(0,255,0);
     }
-    return min;
+
+    PGraphics ghm = createGraphics(5000, 3000, P2D);
+    ghm.smooth(8); 
+    ghm.beginDraw();
+    ghm.hint(DISABLE_DEPTH_MASK);
+    ghm.hint(DISABLE_DEPTH_SORT);
+    ghm.hint(DISABLE_DEPTH_TEST);
+    ghm.hint(ENABLE_ASYNC_SAVEFRAME);
+    ghm.pushMatrix();
+    ghm.resetMatrix();
+    ghm.clear();
+    ghm.blendMode(BLEND);
+    ghm.translate(2500.0f, 1500.0f);
+    
+    ghm.noStroke();
+    for (int i = 0; i < geojsonFiles.length; i++) {
+      final ArrayList<PVector> points = getPoints(geojsonFiles[i]);
+      if (points.size() > 0) {
+        color c = colors[i % colors.length];
+        final PVector hmColor = new PVector(red(c), green(c), blue(c));
+
+        for (PVector p: points) {
+          ghm.beginShape(TRIANGLE_FAN);
+          ghm.fill(hmColor.x, hmColor.y, hmColor.z, 150.0f);
+          ghm.vertex(p.x, p.y);
+          ghm.fill(hmColor.x, hmColor.y, hmColor.z, 0.0f);
+          float angle = 0.0f;
+          for (int j = 0; j <= PRECISION; j++) {
+            ghm.vertex(p.x + RADIUS * cos(angle), p.y + RADIUS * sin(angle));
+            angle += ANGLE_INCREMENT;
+          }
+          ghm.endShape();
+        }
+      }
+    }
+
+    ghm.popMatrix();
+    ghm.save("data/heatmap.png");
+    ghm.endDraw();
   }
 
   /**
