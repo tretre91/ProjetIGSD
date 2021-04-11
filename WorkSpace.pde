@@ -3,7 +3,12 @@ public class WorkSpace {
   private PShape grid;
   
   /**
-   * Creates a WorkSpace, consisting of a Gizmo and a size x size Grid
+   * Creates a workspace.
+   * The workspace consists of a 100x100 grid on the xOy plane and a gizmo
+   * showing the system's orientation, the X axis is in red, the Y axis in
+   * green and the Z axis in blue.
+   *
+   * @param size The grid's size in meters
    */
   public WorkSpace(float size) {
     size = size / 100.0f;
@@ -61,7 +66,7 @@ public class WorkSpace {
   }
   
   /**
-   * Draws the gizmo
+   * Draws the gizmo and the grid
    */
   public void update() {
     shape(gizmo);
@@ -69,7 +74,7 @@ public class WorkSpace {
   }
   
   /**
-   * Toggles Grid and Gizmo visibility
+   * Toggles the workspace's visibility
    */
   public void toggle() {
     final boolean visible = this.gizmo.isVisible();

@@ -1,30 +1,38 @@
 public class Roads {
   private PShape roads;
   
-  
+  /**
+   * Creates a Roads object without size limitations.
+   * This creates an object which can draw lanes of any size, contained in a
+   * GeoJSON file.
+   * This is equivalent to calling Roads(map, geojsonFile, 0.0f)
+   *
+   * @param map A Map3D object
+   * @param geojsonFile A GeoJSON file containing informations about lanes
+   */
   public Roads(Map3D map, String geojsonFile) {
     this(map, geojsonFile, 0.0f);
   }
   
-  public Roads(Map3D map, String geojsonFile, final float displayTreshold) {
-    if (!fileExists(geojsonFile)) exit();
-    
-    JSONObject geojson = loadJSONObject(geojsonFile);
-    if (!geojson.hasKey("type")) {
-      println("WARNING: Invalid GeoJSON file.");
-      exit();
-    } else if(!"FeatureCollection".equals(geojson.getString("type", "undefined"))) {
-      println("WARNING: GeoJSON file doesn't contain feature collection.");
-      exit();
-    }
-    
-    JSONArray features = geojson.getJSONArray("features");
+  /**
+   * Creates a Road object with size limitations.
+   * This creates an object which can draw lanes whose virtual width is over
+   * a threshold. The correspondance between the type of lane and the width
+   * is defined in the LaneProperties class below.
+   *
+   * @param map A Map3D object
+   * @param geojsonFile A GeoJSON file containing informations about lanes
+   * @param displayThreshold The limit under which lanes are not displayed, not
+   *        drawing smaller lanes can help with performance
+   */
+  public Roads(Map3D map, String geojsonFile, final float displayThreshold) {
+    JSONArray features = getFeatures(geojsonFile);
     if (features == null) {
-      println("WARNING: GeoJSON file doesn't contain any feature.");
-      exit();
+      this.roads = createShape();
+      return;
     }
     
-    roads = createShape(GROUP);
+    this.roads = createShape(GROUP);
     PShape portion;
     
     Map3D.GeoPoint gp;
@@ -41,7 +49,7 @@ public class Roads {
       JSONArray coordinates = feature.getJSONObject("geometry").getJSONArray("coordinates");
       if (coordinates != null) {
         properties = new LaneProperties(feature.getJSONObject("properties").getString("highway", "unclassified"));
-        if (properties.laneWidth < displayTreshold) 
+        if (properties.laneWidth < displayThreshold) 
           continue;
         laneColor = properties.laneColor;
         laneWidth = properties.laneWidth;
@@ -66,7 +74,7 @@ public class Roads {
         final PVector vl = opl.toVector();
         
         final PVector vOrtho = new PVector(vf.y - vl.y, vl.x - vf.x).normalize().mult(laneWidth / 2.0f);
-        // On dessine les vertex correspondant au 1er point 
+        
         if (opf.inside()) {
           JSONArray point = coordinates.getJSONArray(1);
           gp = map.new GeoPoint(point.getDouble(0), point.getDouble(1));
@@ -77,7 +85,7 @@ public class Roads {
           portion.normal(0.0f, 0.0f, -1.0f);
           portion.vertex(vf.x + ortho.x, vf.y + ortho.y, vf.z);
         }
-        // On dessine les éventuels points intermédiaires
+        
         for (int p = 1; p < coordinates.size() - 1; p++) {
           JSONArray point = coordinates.getJSONArray(p);
           gp = map.new GeoPoint(point.getDouble(0), point.getDouble(1));
@@ -90,7 +98,7 @@ public class Roads {
             portion.vertex(op.x + vOrtho.x, op.y + vOrtho.x, op.z);
           }
         }
-        // On dessine les vertex correspondant au dernier point
+        
         if (opl.inside()) {
           JSONArray point = coordinates.getJSONArray(coordinates.size() - 2);
           gp = map.new GeoPoint(point.getDouble(0), point.getDouble(1));
@@ -102,26 +110,40 @@ public class Roads {
           portion.vertex(vl.x + ortho.x, vl.y + ortho.y, vl.z);
         }
         portion.endShape();
-        roads.addChild(portion);
+        this.roads.addChild(portion);
       }
     }
     
-    roads.setVisible(true);
+    this.roads.setVisible(true);
   }
   
+  /**
+   * Draws the roads
+   */
   public void update() {
     shape(roads);
   }
   
+  /**
+   * Toggles the roads' vissibility
+   */
   public void toggle() {
     roads.setVisible(!roads.isVisible());
   }
   
+
   private class LaneProperties {
     public final color laneColor;
     public final double elevationOffset;
     public final float laneWidth;
     
+    /**
+     * Creates an object containing properties associated with a particular
+     * GeoJSON lane type.
+     * These properties are the color, the elevation offset and the width.
+     *
+     * @param laneType The lane's type
+     */
     public LaneProperties(String laneType) {
       switch (laneType) {
         case "motorway":

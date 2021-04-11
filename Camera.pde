@@ -17,6 +17,9 @@ public class Camera {
     z = cos(colatitude) * radius;
   }
   
+  /**
+   * Refreshes the lighting and the camera
+   */
   public void update() {
     ambientLight(0x60, 0x60, 0x60);
     if (lightning)
@@ -29,43 +32,75 @@ public class Camera {
       0, 0, 0,
       0, 0, -1
     );
-    
-    //perspective(radians(80), width / height, 10.0f, 100000.0f);
   }
   
+  /**
+   * Toggles the additional directional light
+   */
   public void toggle() {
     lightning = !lightning;
   }
   
+  /**
+   * Returns the camera's distance from the origin (its radius)
+   */
   public float getRadius() { return radius; }
+
+  /**
+   * Returns the camera's longitude
+   */
   public float getLongitude() { return longitude; }
+
+  /**
+   * Returns the camera's colatitude
+   */
   public float getColatitude() { return colatitude; }
+
+  /**
+   * Returns the camera's colatitude (pi/2 - colatitude).
+   */
   public float getLatitude() { return (PI / 2.0) - colatitude; }
   
+  /**
+   * Adjusts the camera's radius.
+   * The radius is kept in the interval [0.5*width; 3*width], width being the
+   * window's width.
+   *
+   * @param offset The value to add to the radius
+   */
   public void adjustRadius(float offset) {
-    radius += offset;
-    if (radius < width * 0.5)
-      radius = width * 0.5;
-    else if (radius > width * 3.0)
-      radius = width * 3.0;
+    radius = constrain(radius + offset, 0.5 * width, 3.0 * width);
     
     x = cos(longitude) * cos(PI/2 - colatitude) * radius;
     y = -sin(longitude) * cos(PI/2 - colatitude) * radius;
     z = cos(colatitude) * radius;
   }
   
+  /**
+   * Adjusts the camera's longitude.
+   * The longitude is always expressed as between -3pi/2 and pi/2
+   *
+   * @param delta The value (in radians) to add to the longitude
+   */
   public void adjustLongitude(float delta) {
     longitude += delta;
+    if (longitude < -3*PI / 2.0) {
+      longitude = PI / 2.0 + (longitude % (-3*PI / 2.0));
+    } else if (longitude > PI / 2.0) {
+      longitude = - 3*PI / 2.0 + (longitude % (PI / 2.0));
+    }
     x = cos(longitude) * cos(PI/2 - colatitude) * radius;
     y = -sin(longitude) * cos(PI/2 - colatitude) * radius;
   }
   
+  /**
+   * Adjusts the camera's colatitude.
+   * The colatitude is kept in the interval [0, pi/2]
+   *
+   * @param delta The value (in radians) to add to the colatitude
+   */
   public void adjustColatitude(float delta) {
-    colatitude += delta;
-    if (colatitude < epsilon)
-      colatitude = epsilon;
-    else if (colatitude > PI / 2)
-      colatitude = PI / 2;
+    colatitude = constrain(colatitude + delta, epsilon, HALF_PI);
       
     x = cos(longitude) * cos(PI/2 - colatitude) * radius;
     y = -sin(longitude) * cos(PI/2 - colatitude) * radius;

@@ -1,22 +1,17 @@
 public class Railways {
   private PShape rails;
 
+  /**
+   * Creates a railways track
+   *
+   * @param map A Map3D object
+   * @param geojsonFile The GeoJSON file containing informations about the railway
+   */
   public Railways(Map3D map, String geojsonFile) {
-    if (!fileExists(geojsonFile)) exit();
-
-    JSONObject geojson = loadJSONObject(geojsonFile);
-    if (!geojson.hasKey("type")) {
-      println("WARNING: Invalid GeoJSON file.");
-      exit();
-    } else if (!"FeatureCollection".equals(geojson.getString("type", "undefined"))) {
-      println("WARNING: GeoJSON file doesn't contain feature collection.");
-      exit();
-    }
-
-    JSONArray features = geojson.getJSONArray("features");
+    JSONArray features = getFeatures(geojsonFile);
     if (features == null) {
-      println("WARNING: GeoJSON file doesn't contain any feature.");
-      exit();
+      rails = createShape();
+      return;
     }
 
     rails = createShape(GROUP);
@@ -53,7 +48,7 @@ public class Railways {
         final PVector vl = opl.toVector();
 
         final PVector vOrtho = new PVector(vf.y - vl.y, vl.x - vf.x).normalize().mult(laneWidth / 2.0f);
-        // On dessine les vertex correspondant au 1er point 
+        // Drawing the first vertices corresponding to the first point
         if (opf.inside()) {
           JSONArray point = coordinates.getJSONArray(1);
           gp = map.new GeoPoint(point.getDouble(0), point.getDouble(1));
@@ -64,7 +59,7 @@ public class Railways {
           portion.normal(0.0f, 0.0f, -1.0f);
           portion.vertex(vf.x + ortho.x, vf.y + ortho.y, vf.z);
         }
-        // On dessine les éventuels points intermédiaires
+        // the ones corresponding to the middle points
         for (int p = 1; p < coordinates.size() - 1; p++) {
           JSONArray point = coordinates.getJSONArray(p);
           gp = map.new GeoPoint(point.getDouble(0), point.getDouble(1));
@@ -77,7 +72,7 @@ public class Railways {
             portion.vertex(op.x + vOrtho.x, op.y + vOrtho.x, op.z);
           }
         }
-        // On dessine les vertex correspondant au dernier point
+        // And the vertices corresponding to the last point
         if (opl.inside()) {
           JSONArray point = coordinates.getJSONArray(coordinates.size() - 2);
           gp = map.new GeoPoint(point.getDouble(0), point.getDouble(1));
@@ -96,10 +91,16 @@ public class Railways {
     rails.setVisible(true);
   }
 
+  /**
+   * Draws the railway
+   */
   public void update() {
     shape(rails);
   }
 
+  /**
+   * Toggles the railway's visibility
+   */
   public void toggle() {
     rails.setVisible(!rails.isVisible());
   }

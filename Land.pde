@@ -10,7 +10,8 @@ public class Land {
   
   /**
   * Returns a Land object.
-  * Prepares land shadow, wireframe and textured shape
+  * This creates a land object with a wireframe and a textured representation,
+  * and a shadow.
   * @param map Land associated elevation Map3D object
   * @return Land object
   */
@@ -31,8 +32,16 @@ public class Land {
     this.shadow.vertex(w/2, -h/2, -10.0f);
     this.shadow.endShape();
     
+    if (!fileExists(textureFilename)) {
+      this.wireFrame = createShape();
+      this.satellite = createShape();
+      return;
+    }
     final int[] indices = {0,1,3,2};
     Map3D.ObjectPoint[] points = new Map3D.ObjectPoint[4];
+    this.poi = new Poi(this.map);
+    final ArrayList<PVector> pointsOfInterest = poi.getPoints("bus_stops.geojson");
+    
     // Wireframe shape
     this.wfHeatmapShader = loadShader("wireframeHeatmapFrag.glsl", "wireframeHeatmapVert.glsl");
     this.wfHeatmapShader.set("showHeatmap", showHeatmap);
@@ -42,24 +51,21 @@ public class Land {
     this.wireFrame.strokeWeight(0.5f);
     
     // Satellite shape
-    if (!fileExists(textureFilename)) exit();
     this.heatmapShader = loadShader("heatmapFrag.glsl", "heatmapVert.glsl");
     this.heatmapShader.set("showHeatmap", showHeatmap);
-    this.poi = new Poi(this.map);
-    final ArrayList<PVector> pointsOfInterest = poi.getPoints("bus_stops.geojson");
-    
-    PImage uvmap = loadImage(textureFilename);
-    final float uStep = (uvmap.width * tileSize) / w;
-    final float vStep = (uvmap.height * tileSize) / h;
-    float v, u = 0.0f;
-    PVector[] normals = new PVector[4];
-    float[] minDistances = new float[4];
-    final PVector[] texOffsets = { new PVector(0,0,0), new PVector(uStep,0,0), new PVector(0,vStep,0), new PVector(uStep,vStep,0) };
     this.satellite = createShape();
     this.satellite.beginShape(QUADS);
     this.satellite.noStroke();
     this.satellite.emissive(0xD0);
+    PImage uvmap = loadImage(textureFilename);
     this.satellite.texture(uvmap);
+    final float uStep = (uvmap.width * tileSize) / w;
+    final float vStep = (uvmap.height * tileSize) / h;
+    float v, u = 0.0f;
+    final PVector[] texOffsets = { new PVector(0,0,0), new PVector(uStep,0,0), new PVector(0,vStep,0), new PVector(uStep,vStep,0) };
+
+    PVector[] normals = new PVector[4];
+    float[] minDistances = new float[4];
     
     for (float i = -w/2; i < w/2; i += tileSize) {
       points[0] = this.map.new ObjectPoint(i, -h/2);
@@ -102,6 +108,9 @@ public class Land {
     this.satellite.setVisible(true);
   }
   
+  /**
+   * Draws The land, its shadow and the heatmap(s).
+   */
   public void update() {
     shape(shadow);
     shader(wfHeatmapShader);
@@ -111,12 +120,18 @@ public class Land {
     resetShader();
   }
   
+  /**
+   * Switches between the textured and wireframe representations of the land.
+   */
   public void toggle() {
     final boolean visible = wireFrame.isVisible();
     this.wireFrame.setVisible(!visible);
     this.satellite.setVisible(visible);
   }
 
+  /**
+   * Toggles the heatmaps visibility.
+   */
   public void toggleHeatmap() {
     this.showHeatmap = !this.showHeatmap;
     this.heatmapShader.set("showHeatmap", showHeatmap);

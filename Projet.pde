@@ -8,17 +8,45 @@ Railways railways;
 Roads roads;
 Buildings buildings;
 
-/** Vérifie si un nom de fichier correspond à un fichier existant
+/** 
+ * Vérifie si un nom de fichier correspond à un fichier existant
  * @param filename Le nom du fichier à chercher
  * @return true si le fichier existe, false sinon
  */
-public boolean fileExists(String filename) {
+boolean fileExists(String filename) {
   File ressource = dataFile(filename);
   if (!ressource.exists() || ressource.isDirectory()) {
-    println("ERROR: file " + filename + " not found.");
     return false;
   }
   return true;
+}
+
+/**
+ * Vérifie si un fichier GeoJSON est conforme, et renvoie ses features
+ * @param filename Le nom du fichier
+ * @return Le JSONArray correspondant à la clé "features", renvoie null
+ *         si le fichier n'est pas trouvé ou n'est pas conforme
+ */
+JSONArray getFeatures(String filename) {
+  if (!fileExists(filename)) {
+    println("ERROR: file " + filename + " not found.");
+    return null;
+  }
+
+  JSONObject geojson = loadJSONObject(filename);
+  if (!geojson.hasKey("type")) {
+    println("WARNING: Invalid GeoJSON file.");
+    return null;
+  } else if (!"FeatureCollection".equals(geojson.getString("type", "undefined"))) {
+    println("WARNING: GeoJSON file doesn't contain feature collection.");
+    return null;
+  }
+
+  JSONArray features = geojson.getJSONArray("features");
+  if (features == null) {
+    println("WARNING: GeoJSON file doesn't contain any feature.");
+  }
+  return features;
 }
 
 void setup() {

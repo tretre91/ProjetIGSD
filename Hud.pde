@@ -2,21 +2,38 @@ public class Hud {
   private PMatrix3D hud;
   private Camera camera;
   
+  /**
+   * Creates an HUD which only displays the framerate.
+   * If you use this constructor you should then call setCamera in order to be
+   * able to display the camera's informations.
+   */
   public Hud() {
     // Should be constructed just after P3D size() or fullScreen()
     this.hud = g.getMatrix((PMatrix3D) null);
     this.camera = null;
   }
   
-  public Hud(Camera cam) {
+  /**
+   * Creates a HUD which displays the framerate and informations about the camera
+   * 
+   * @param cam The camera whose position informations will be displayed
+   */
+  public Hud(Camera camera) {
     this.hud = g.getMatrix((PMatrix3D) null);
-    this.camera = cam;
+    this.camera = camera;
   }
   
+  /**
+   * Associates a camera.
+   * @param camera The camera whose informations will be displayed
+   */
   public void setCamera(Camera camera) {
     this.camera = camera;
   }
   
+  /**
+   * Pushes the current state and prepares the drawing of the HUD.
+   */
   private void begin() {
     g.noLights();
     g.pushMatrix();
@@ -25,11 +42,17 @@ public class Hud {
     g.applyMatrix(this.hud);
   }
   
+  /**
+   * Pops the previously saved matrix and re-enables depth testing.
+   */
   private void end() {
     g.hint(PConstants.ENABLE_DEPTH_TEST);
     g.popMatrix();
   }
   
+  /**
+   * Draws the FPS counter overlay.
+   */
   private void displayFPS() {
     // Bottom left area
     noStroke();
@@ -44,6 +67,9 @@ public class Hud {
     text(String.valueOf((int)frameRate) + " fps", 40, height-20);
   }
   
+  /**
+   * Draws the camera information overlay.
+   */
   private void displayCamera() {
     noStroke();
     fill(96);
@@ -67,15 +93,18 @@ public class Hud {
     String latitude = "-";
     String radius = "-";
     if (camera != null) {
-      longitude = String.valueOf((int)round(degrees(camera.getLongitude()))) + "°";
-      latitude = String.valueOf((int)round(degrees(camera.getLatitude()))) + "°";
-      radius = String.valueOf((int)camera.getRadius()) + " m";
+      longitude = String.valueOf(round(degrees(camera.getLongitude()))) + "°";
+      latitude = String.valueOf(round(degrees(camera.getLatitude()))) + "°";
+      radius = String.valueOf(camera.getRadius()) + " m";
     }
     text(longitude, 155, 65);
     text(latitude, 155, 85);
     text(radius , 155, 105);
   }
   
+  /**
+   * Draws the HUD.
+   */
   public void update() {
     this.begin();
     displayFPS();

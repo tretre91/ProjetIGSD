@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-
 public class Gpx {
   private PShape track;
   private PShape posts;
@@ -10,30 +8,27 @@ public class Gpx {
   private boolean showDescription = true;
   private Camera camera;
   
+  /**
+   * Creates a track with thumbtacks.
+   * This creates a track and thumbtacks which can be clicked on to display
+   * informations about the step they are pointing to.
+   *
+   * @param map A Map3D object
+   * @param geojsonFile The GeoJSON file containing the track's informations
+   * @param camera The camera used to display the thumbtacks' labels
+   */
   public Gpx(Map3D map, String geojsonFile, Camera camera) {
     this.camera = camera;
     this.descriptions = new ArrayList<String>();
     this.hit = new PVector();
-    // Check ressources
-    if (!fileExists(geojsonFile)) exit();
     
-    // Load geojson and check features collection
-    JSONObject geojson = loadJSONObject(geojsonFile);
-    if (!geojson.hasKey("type")) {
-      println("WARNING: Invalid GeoJSON file.");
-      exit();
-    } else if (!"FeatureCollection".equals(geojson.getString("type", "undefined"))) {
-      println("WARNING: GeoJSON file doesn't contain a feature collection.");
-      exit();
-    }
-    
-    // Parse features
-    JSONArray features = geojson.getJSONArray("features");
+    JSONArray features = getFeatures(geojsonFile);
     if (features == null) {
-      println("WARNING: GeoJSON file doesn't contain any feature.");
-      exit();
+      this.track = createShape();
+      this.posts = createShape();
+      this.thumbtacks = createShape();
+      return;
     }
-    
     
     this.posts = createShape();
     this.posts.beginShape(LINES);
@@ -103,6 +98,9 @@ public class Gpx {
     thumbtacks.setVisible(true);
   }
   
+  /**
+   * Draws the track and the thumbtacks (and if needed a label).
+   */
   public void update() {
     shape(track);
     shape(posts);
@@ -125,6 +123,9 @@ public class Gpx {
     }
   }
   
+  /**
+   * Toogles the track, thumbtacks and description's visibility.
+   */
   public void toggle() {
     final boolean visible = track.isVisible();
     track.setVisible(!visible);
@@ -133,6 +134,14 @@ public class Gpx {
     showDescription = !visible;
   }
   
+  /**
+   * Handles the user's clicks.
+   * If the user clicked on a thumbtack then the associated label will be
+   * displayed until he clicks somewhere else.
+   * 
+   * @param x The cursor's x position
+   * @param y The cursor's y position
+   */
   public void clic(float x, float y) {
     float distance;
     hitIndex = -1;

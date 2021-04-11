@@ -2,28 +2,30 @@ public class Buildings {
   private PShape buildings;
   Map3D map;
   
+  /**
+   * Creates a Buildings object.
+   * This constructor only creates an empty object, you can add groups of
+   * buildigs with the add method.
+   *
+   * @param map A Map3D object
+   */
   public Buildings(Map3D map) {
     this.buildings = createShape(GROUP);
     this.map = map;
     buildings.setVisible(true);
   }
   
+  /**
+   * Adds a group of buildings to the object.
+   *
+   * @param geojsonFile A GeoJSON file containing informations about the
+   *                    building's shapes
+   * @param buildingColor The color to give to the buildings
+   */
   public void add(String geojsonFile, int buildingColor) {
-    if (!fileExists(geojsonFile)) exit();
-    
-    JSONObject geojson = loadJSONObject(geojsonFile);
-    if (!geojson.hasKey("type")) {
-      println("WARNING: Invalid GeoJSON file.");
-      exit();
-    } else if(!"FeatureCollection".equals(geojson.getString("type", "undefined"))) {
-      println("WARNING: GeoJSON file doesn't contain feature collection.");
-      exit();
-    }
-    
-    JSONArray features = geojson.getJSONArray("features");
+    JSONArray features = getFeatures(geojsonFile);
     if (features == null) {
-      println("WARNING: GeoJSON file doesn't contain any feature.");
-      exit();
+      return;
     }
     
     PShape buildingsGroup = createShape(GROUP);
@@ -99,10 +101,16 @@ public class Buildings {
     buildings.addChild(buildingsGroup);
   }
   
+  /**
+   * Draws the buildings.
+   */
   public void update() {
     shape(buildings);
   }
   
+  /**
+   * Toggle the buildings' visibility.
+   */
   public void toggle() {
     buildings.setVisible(!buildings.isVisible());
   }
