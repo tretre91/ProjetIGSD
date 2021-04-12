@@ -8,6 +8,12 @@ Railways railways;
 Roads roads;
 Buildings buildings;
 
+int frameStart = 0;
+final float CAMERA_SPEED = QUARTER_PI;
+boolean moveUp = false, moveDown = false;
+boolean moveLeft = false, moveRight = false;
+boolean zoomIn = false, zoomOut = false;
+
 /** 
  * Vérifie si un nom de fichier correspond à un fichier existant
  * @param filename Le nom du fichier à chercher
@@ -77,12 +83,12 @@ void setup() {
   this.buildings.add("buildings_CEA_algorithmes.geojson", 0xFF30FF30);
   this.buildings.add("buildings_Thales.geojson", 0xFFFF3030);
   this.buildings.add("buildings_Paris_Saclay.geojson", 0xFFee00dd);
-  
-  hint(ENABLE_KEY_REPEAT);
 }
 
 void draw() {
   background(64);
+  processCamMovement(cam, (millis() - frameStart) / 1000.0f);
+  frameStart = millis();
   cam.update();
   workspace.update();
   land.update();
@@ -94,23 +100,32 @@ void draw() {
   hud.update();
 }
 
+void processCamMovement(Camera camera, float frametime) {
+  if (moveUp) camera.adjustColatitude(-CAMERA_SPEED * frametime);
+  if (moveDown) camera.adjustColatitude(CAMERA_SPEED * frametime);
+  if (moveLeft) camera.adjustLongitude(-CAMERA_SPEED * frametime);
+  if (moveRight) camera.adjustLongitude(CAMERA_SPEED * frametime);
+  if (zoomIn) camera.adjustRadius(-width * frametime);
+  if (zoomOut) camera.adjustRadius(width * frametime);
+}
+
 void keyPressed() {
   if (key == CODED) {
     switch (keyCode) {
       case UP:
-        cam.adjustColatitude(-PI / 50.0);
+        moveUp = true;
         break;
       
       case DOWN:
-        cam.adjustColatitude(PI / 50.0);
+        moveDown = true;
         break;
       
       case LEFT:
-        cam.adjustLongitude(-PI / 50.0);
+        moveLeft = true;
         break;
         
       case RIGHT:
-        cam.adjustLongitude(PI / 50.0);
+        moveRight = true;
         break;
         
       default:
@@ -125,11 +140,11 @@ void keyPressed() {
         break;
       
       case '+':
-        cam.adjustRadius(-width * 0.1);
+        zoomIn = true;
         break;
         
       case '-':
-        cam.adjustRadius(width * 0.1);
+        zoomOut = true;
         break;
       
       case 'l':
@@ -164,6 +179,44 @@ void keyPressed() {
   }
 }
 
+void keyReleased() {
+  if (key == CODED) {
+    switch (keyCode) {
+      case UP:
+        moveUp = false;
+        break;
+      
+      case DOWN:
+        moveDown = false;
+        break;
+      
+      case LEFT:
+        moveLeft = false;
+        break;
+        
+      case RIGHT:
+        moveRight = false;
+        break;
+        
+      default:
+        break;
+    }
+  } else {
+    switch (key) {
+      case '+':
+        zoomIn = false;
+        break;
+
+      case '-':
+        zoomOut = false;
+        break;
+        
+      default:
+        break;
+    }
+  }
+}
+
 void mouseWheel(MouseEvent event) {
   float ec = event.getCount();
   cam.adjustRadius(width * (ec / 10.0));
@@ -174,7 +227,7 @@ void mouseDragged() {
     float dx = mouseX - pmouseX;
     cam.adjustLongitude((-PI / 2) * (dx / width));
     float dy = mouseY - pmouseY;
-    cam.adjustColatitude((PI / 4) * (-dy / width));
+    cam.adjustColatitude((PI / 2) * (-dy / width));
   }
 }
 
