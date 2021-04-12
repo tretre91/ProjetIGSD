@@ -66,7 +66,7 @@ public class WorkSpace {
   }
   
   /**
-   * Draws the gizmo and the grid
+   * Draws the gizmo and the grid.
    */
   public void update() {
     shape(gizmo);
@@ -74,7 +74,7 @@ public class WorkSpace {
   }
   
   /**
-   * Toggles the workspace's visibility
+   * Toggles the workspace's visibility.
    */
   public void toggle() {
     final boolean visible = this.gizmo.isVisible();

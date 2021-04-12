@@ -7,7 +7,7 @@ public class Roads {
    * GeoJSON file.
    * This is equivalent to calling Roads(map, geojsonFile, 0.0f)
    *
-   * @param map A Map3D object
+   * @param map         A Map3D object
    * @param geojsonFile A GeoJSON file containing informations about lanes
    */
   public Roads(Map3D map, String geojsonFile) {
@@ -15,13 +15,13 @@ public class Roads {
   }
   
   /**
-   * Creates a Road object with size limitations.
+   * Creates a Roads object with size limitations.
    * This creates an object which can draw lanes whose virtual width is over
    * a threshold. The correspondance between the type of lane and the width
    * is defined in the LaneProperties class below.
    *
-   * @param map A Map3D object
-   * @param geojsonFile A GeoJSON file containing informations about lanes
+   * @param map              A Map3D object
+   * @param geojsonFile      A GeoJSON file containing informations about lanes
    * @param displayThreshold The limit under which lanes are not displayed, not
    *        drawing smaller lanes can help with performance
    */
@@ -118,14 +118,14 @@ public class Roads {
   }
   
   /**
-   * Draws the roads
+   * Draws the roads.
    */
   public void update() {
     shape(roads);
   }
   
   /**
-   * Toggles the roads' vissibility
+   * Toggles the roads' vissibility.
    */
   public void toggle() {
     roads.setVisible(!roads.isVisible());

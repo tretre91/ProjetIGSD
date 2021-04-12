@@ -8,6 +8,11 @@ public class Camera {
   
   private boolean lightning = false;
   
+  /**
+   * Creates a Camera object.
+   * The camera's initial position is above the positive y axis, pointing to
+   * the origin.
+   */
   public Camera() {
     radius = 2600.0f;
     longitude = -PI / 2.0;
@@ -18,7 +23,7 @@ public class Camera {
   }
   
   /**
-   * Refreshes the lighting and the camera
+   * Refreshes the lighting and the camera.
    */
   public void update() {
     ambientLight(0x60, 0x60, 0x60);
@@ -35,24 +40,24 @@ public class Camera {
   }
   
   /**
-   * Toggles the additional directional light
+   * Toggles the additional directional light.
    */
   public void toggle() {
     lightning = !lightning;
   }
   
   /**
-   * Returns the camera's distance from the origin (its radius)
+   * Returns the camera's distance from the origin (its radius).
    */
   public float getRadius() { return radius; }
 
   /**
-   * Returns the camera's longitude
+   * Returns the camera's longitude.
    */
   public float getLongitude() { return longitude; }
 
   /**
-   * Returns the camera's colatitude
+   * Returns the camera's colatitude.
    */
   public float getColatitude() { return colatitude; }
 
@@ -66,10 +71,10 @@ public class Camera {
    * The radius is kept in the interval [0.5*width; 3*width], width being the
    * window's width.
    *
-   * @param offset The value to add to the radius
+   * @param delta The value to add to the radius
    */
-  public void adjustRadius(float offset) {
-    radius = constrain(radius + offset, 0.5 * width, 3.0 * width);
+  public void adjustRadius(float delta) {
+    radius = constrain(radius + delta, 0.5 * width, 3.0 * width);
     
     x = cos(longitude) * cos(PI/2 - colatitude) * radius;
     y = -sin(longitude) * cos(PI/2 - colatitude) * radius;
@@ -78,7 +83,7 @@ public class Camera {
   
   /**
    * Adjusts the camera's longitude.
-   * The longitude is always expressed as between -3pi/2 and pi/2
+   * The longitude is always expressed between -3pi/2 and pi/2.
    *
    * @param delta The value (in radians) to add to the longitude
    */
@@ -95,7 +100,7 @@ public class Camera {
   
   /**
    * Adjusts the camera's colatitude.
-   * The colatitude is kept in the interval [0, pi/2]
+   * The colatitude is kept in the interval [0, pi/2].
    *
    * @param delta The value (in radians) to add to the colatitude
    */

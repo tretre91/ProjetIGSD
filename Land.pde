@@ -7,28 +7,26 @@ public class Land {
   private boolean showHeatmap = true;
   
   /**
-  * Returns a Land object.
-  * This creates a land object with a wireframe and a textured representation,
-  * and a shadow.
+  * Creates a Land object.
+  * This creates a land object with a wireframe representation, a textured
+  * representation, and a shadow.
   *
-  * @param map Land associated elevation Map3D object
+  * @param map             Land associated elevation Map3D object
   * @param textureFilename The filename of the texture to apply to the land
-  * @return Land object
   */
   Land(Map3D map, String textureFilename) {
     this(map, textureFilename, null);
   }
   
   /**
-  * Returns a Land object.
-  * This creates a land object with a wireframe and a textured representation,
-  * a shadow, and a heatmap.
+  * Creates a Land object paired with a heatmap.
+  * This creates a land object with a wireframe representation, a textured
+  * representation, a shadow, and a heatmap.
   *
-  * @param map Land associated elevation Map3D object
+  * @param map             Land associated elevation Map3D object
   * @param textureFilename The filename of the texture to apply to the land
-  * @param heatmap A PImage holding the heatmap texture, such texture can be
-  *                generated using the Poi.createHeatmap() method
-  * @return Land object
+  * @param heatmap         A PImage holding the heatmap texture, such texture
+  *                        can be generated using the Poi.createHeatmap() method
   */
   Land(Map3D map, String textureFilename, PImage heatmap) {
     final float tileSize = 25.0f;
@@ -128,8 +126,8 @@ public class Land {
   /**
    * Maps a point to the corresponding pixel's index in a PImage
    *
-   * @param x The x coordinate of the object point
-   * @param y The y coordinate of the object point
+   * @param x     The x coordinate of the object point
+   * @param y     The y coordinate of the object point
    * @param image A PImage
    * @return The index of the pixel the point would correspond to if the land
    *         and the image were the same size.
@@ -162,7 +160,7 @@ public class Land {
   }
 
   /**
-   * Toggles the heatmaps visibility.
+   * Toggles the heatmaps' visibility.
    */
   public void toggleHeatmap() {
     this.showHeatmap = !this.showHeatmap;

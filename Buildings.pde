@@ -18,8 +18,8 @@ public class Buildings {
   /**
    * Adds a group of buildings to the object.
    *
-   * @param geojsonFile A GeoJSON file containing informations about the
-   *                    building's shapes
+   * @param geojsonFile   A GeoJSON file containing informations about the
+   *                      buildings' shapes
    * @param buildingColor The color to give to the buildings
    */
   public void add(String geojsonFile, int buildingColor) {
@@ -109,7 +109,7 @@ public class Buildings {
   }
   
   /**
-   * Toggle the buildings' visibility.
+   * Toggles the buildings' visibility.
    */
   public void toggle() {
     buildings.setVisible(!buildings.isVisible());

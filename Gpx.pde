@@ -13,9 +13,9 @@ public class Gpx {
    * This creates a track and thumbtacks which can be clicked on to display
    * informations about the step they are pointing to.
    *
-   * @param map A Map3D object
+   * @param map         A Map3D object
    * @param geojsonFile The GeoJSON file containing the track's informations
-   * @param camera The camera used to display the thumbtacks' labels
+   * @param camera      The camera used to display the thumbtacks' labels
    */
   public Gpx(Map3D map, String geojsonFile, Camera camera) {
     this.camera = camera;

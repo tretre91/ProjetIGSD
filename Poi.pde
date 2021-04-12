@@ -6,7 +6,7 @@ public class Poi {
 
   /**
    * Creates a Poi object.
-   * This object is used to retrive the positions of point of interest which
+   * This object is used to retrieve the position of points of interest which
    * are defined in a GeoJSON file.
    *
    * @param map A Map3D object
@@ -17,11 +17,12 @@ public class Poi {
 
   /**
    * Creates a heatmap representing the distance from a type of point of interest.
+   * The generated heatmap is stored in data/heatmap.png .
    *
    * @param colors       An array of colors to be applied for each type of point.
    *                     The same color can end up being used multiple times if 
    *                     the number of colors is less than the number of files.
-   * @param geojsonFiles The name of the GeoJSON files containing the points of 
+   * @param geojsonFiles The names of the GeoJSON files containing the points of 
    *                     interest we want to represent, one or multiple files can
    *                     be specified.
    */

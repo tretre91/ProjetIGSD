@@ -2,9 +2,9 @@ public class Railways {
   private PShape rails;
 
   /**
-   * Creates a railways track
+   * Creates a Railways object.
    *
-   * @param map A Map3D object
+   * @param map         A Map3D object
    * @param geojsonFile The GeoJSON file containing informations about the railway
    */
   public Railways(Map3D map, String geojsonFile) {
@@ -92,14 +92,14 @@ public class Railways {
   }
 
   /**
-   * Draws the railway
+   * Draws the railway.
    */
   public void update() {
     shape(rails);
   }
 
   /**
-   * Toggles the railway's visibility
+   * Toggles the railway's visibility.
    */
   public void toggle() {
     rails.setVisible(!rails.isVisible());

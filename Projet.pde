@@ -14,10 +14,12 @@ boolean moveUp = false, moveDown = false;
 boolean moveLeft = false, moveRight = false;
 boolean zoomIn = false, zoomOut = false;
 
-/** 
- * Vérifie si un nom de fichier correspond à un fichier existant
- * @param filename Le nom du fichier à chercher
- * @return true si le fichier existe, false sinon
+/**
+ * Cheks if a file exists.
+ * 
+ * @param filename
+ * @return true if the filename is associated with an existing file, false
+ *         otherwise 
  */
 boolean fileExists(String filename) {
   File ressource = dataFile(filename);
@@ -28,10 +30,11 @@ boolean fileExists(String filename) {
 }
 
 /**
- * Vérifie si un fichier GeoJSON est conforme, et renvoie ses features
- * @param filename Le nom du fichier
- * @return Le JSONArray correspondant à la clé "features", renvoie null
- *         si le fichier n'est pas trouvé ou n'est pas conforme
+ * Checks if a GeoJSON file is valid, and returns its features.
+ * 
+ * @param filename The GeoJSON file's name
+ * @return The JSONArray corresponding to the 'features' key. Returns null if
+ *         the file was not found or is not valid
  */
 JSONArray getFeatures(String filename) {
   if (!fileExists(filename)) {
