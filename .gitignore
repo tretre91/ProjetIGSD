@@ -3,8 +3,10 @@ documentation/
 exemples/
 instructions/
 
-# Ignore le fichier qui contient les remarques
+# Ignore le rapport et le fichier qui contient les remarques
 Remarques.md
+*.docx
+assets/
 
 # Ignore les dossiers spécifiques à vscode
 .vscode/

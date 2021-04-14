@@ -98,7 +98,7 @@ public class Hud {
     if (camera != null) {
       longitude = String.valueOf(round(degrees(camera.getLongitude()))) + "°";
       latitude = String.valueOf(round(degrees(camera.getLatitude()))) + "°";
-      radius = String.valueOf(camera.getRadius()) + " m";
+      radius = String.valueOf(round(camera.getRadius())) + " m";
     }
     text(longitude, 155, 65);
     text(latitude, 155, 85);
