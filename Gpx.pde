@@ -3,9 +3,10 @@ public class Gpx {
   private PShape posts;
   private PShape thumbtacks;
   private ArrayList<String> descriptions;
-  private int hitIndex = -1;
-  private PVector hit;
+  private int selectedIndex = -1;
+  private PVector selectedThumbtack;
   private boolean showDescription = true;
+  private final float TEXT_SIZE = 48.0f;
   private Camera camera;
   
   /**
@@ -20,7 +21,7 @@ public class Gpx {
   public Gpx(Map3D map, String geojsonFile, Camera camera) {
     this.camera = camera;
     this.descriptions = new ArrayList<String>();
-    this.hit = new PVector();
+    this.selectedThumbtack = new PVector();
     
     JSONArray features = getFeatures(geojsonFile);
     if (features == null) {
@@ -106,18 +107,22 @@ public class Gpx {
     shape(posts);
     shape(thumbtacks);
     
-    if(showDescription && hitIndex != -1) {
+    if(showDescription && selectedIndex != -1) {
       pushMatrix();
-      lights();
-      fill(0xFFFFFFFF);
-      translate(hit.x, hit.y, hit.z + 10.0f);
+      translate(selectedThumbtack.x, selectedThumbtack.y, selectedThumbtack.z + 60.0f);
       rotateZ(-this.camera.longitude-HALF_PI);
       rotateX(-this.camera.colatitude);
       g.hint(PConstants.DISABLE_DEPTH_TEST);
+      textSize(TEXT_SIZE);
+      final String description = descriptions.get(selectedIndex);
+      final float txtWidth = textWidth(description);
+      fill(96);
+      rectMode(CENTER);
+      rect(0, 0, 1.1f * txtWidth, 1.1f * TEXT_SIZE + 20, 20, 20, 20, 20);
+      fill(0xFFFFFFFF);
       textMode(SHAPE);
-      textSize(48);
-      textAlign(LEFT, CENTER);
-      text(descriptions.get(hitIndex), 0, 0);
+      textAlign(CENTER, CENTER);
+      text(description, 0, 0);
       g.hint(PConstants.ENABLE_DEPTH_TEST);
       popMatrix();
     }
@@ -144,13 +149,16 @@ public class Gpx {
    */
   public void clic(float x, float y) {
     float distance;
-    hitIndex = -1;
+    selectedIndex = -1;
     for(int v = 0; v < thumbtacks.getVertexCount(); v++) {
-      if (hitIndex == -1) {
-        thumbtacks.getVertex(v, hit);
-        distance = dist(x, y, screenX(hit.x, hit.y, hit.z), screenY(hit.x, hit.y, hit.z));
+      if (selectedIndex == -1) {
+        thumbtacks.getVertex(v, selectedThumbtack);
+        distance = dist(x, y,
+          screenX(selectedThumbtack.x, selectedThumbtack.y, selectedThumbtack.z),
+          screenY(selectedThumbtack.x, selectedThumbtack.y, selectedThumbtack.z)
+        );
         if (distance < 5.0f) {
-          hitIndex = v;
+          selectedIndex = v;
           thumbtacks.setStroke(v, 0xFF3FFF7F);
           continue;
         }

@@ -151,29 +151,34 @@ public class Roads {
           this.elevationOffset = 3.75d;
           this.laneWidth = 8.0f;
           break;
+          
         case "trunk":
           this.laneColor = 0xFFfbb29a;
           this.elevationOffset = 3.60d;
           this.laneWidth = 7.0f;
           break;
+
         case "trunk_link":
         case "primary":
           this.laneColor = 0xFFfdd7a1;
           this.elevationOffset = 3.45d;
           this.laneWidth = 6.0f;
           break;
+
         case "secondary":
         case "primary_link":
           this.laneColor = 0xFFf6fabb;
           this.elevationOffset = 3.30d;
           this.laneWidth = 5.0f;
           break;
+
         case "tertiary":
         case "secondary_link":
           this.laneColor = 0xFFE2E5A9;
           this.elevationOffset = 3.15d;
           this.laneWidth = 4.0f;
           break;
+
         case "tertiary_link":
         case "residential":
         case "construction":
@@ -182,6 +187,7 @@ public class Roads {
           this.elevationOffset = 3.00d;
           this.laneWidth = 3.5f;
           break;
+
         case "corridor":
         case "cycleway":
         case "footway":
@@ -193,12 +199,13 @@ public class Roads {
         case "unclassified":
           this.laneColor = 0xFFcee8B9;
           this.elevationOffset = 2.85d;
-          this.laneWidth = 1.0f;
+          this.laneWidth = 2.0f;
           break;
+
         default:
           this.laneColor = 0xFFFF0000;
           this.elevationOffset = 1.50d;
-          this.laneWidth = 0.5f;
+          this.laneWidth = 1.5f;
           println("WARNING: Roads kind not handled : ", laneType);
           break;
       }

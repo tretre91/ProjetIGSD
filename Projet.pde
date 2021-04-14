@@ -96,10 +96,10 @@ void draw() {
   workspace.update();
   land.update();
   buildings.update();
-  gpx.update();
-  noLights();
   roads.update();
+  noLights();
   railways.update();
+  gpx.update();
   hud.update();
 }
 
