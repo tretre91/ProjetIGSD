@@ -34,12 +34,12 @@ public class Gpx {
     this.posts = createShape();
     this.posts.beginShape(LINES);
     posts.stroke(color(255));
-    posts.strokeWeight(1.0f);
+    posts.strokeWeight(2.0f);
     
     this.thumbtacks = createShape();
     this.thumbtacks.beginShape(POINTS);
     thumbtacks.stroke(color(255, 0, 0));
-    thumbtacks.strokeWeight(7.0f);
+    thumbtacks.strokeWeight(10.0f);
     
     Map3D.ObjectPoint op;
             
@@ -80,8 +80,8 @@ public class Gpx {
             op = map.new ObjectPoint(map.new GeoPoint(point.getDouble(0), point.getDouble(1)));
             
             this.posts.vertex(op.x, op.y, op.z);
-            this.posts.vertex(op.x, op.y, op.z + 50.0f);
-            this.thumbtacks.vertex(op.x, op.y, op.z + 50.0f);
+            this.posts.vertex(op.x, op.y, op.z + 70.0f);
+            this.thumbtacks.vertex(op.x, op.y, op.z + 70.0f);
           }
           break;
           

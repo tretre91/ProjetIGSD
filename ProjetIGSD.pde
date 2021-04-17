@@ -14,6 +14,8 @@ boolean moveUp = false, moveDown = false;
 boolean moveLeft = false, moveRight = false;
 boolean zoomIn = false, zoomOut = false;
 
+final float LIGHT_Z = 1200.0f;
+
 /**
  * Cheks if a file exists.
  * 
@@ -59,13 +61,9 @@ JSONArray getFeatures(String filename) {
 }
 
 void setup() {
-  size(1500, 1000, P3D);
-  //fullScreen(P3D);
-  frameRate(60);
-  smooth(8);
-  workspace = new WorkSpace(250 * 100);
-  cam = new Camera();
-  hud = new Hud(cam);
+  this.workspace = new WorkSpace(250 * 100);
+  this.cam = new Camera();
+  this.hud = new Hud(this.cam);
   
   // load height map
   this.map = new Map3D("paris_saclay.data");
@@ -86,6 +84,11 @@ void setup() {
   this.buildings.add("buildings_CEA_algorithmes.geojson", 0xFF30FF30);
   this.buildings.add("buildings_Thales.geojson", 0xFFFF3030);
   this.buildings.add("buildings_Paris_Saclay.geojson", 0xFFee00dd);
+  
+  size(1200, 800, P3D);
+  //fullScreen(P3D);
+  frameRate(60);
+  smooth(8);
 }
 
 void draw() {
@@ -103,6 +106,13 @@ void draw() {
   hud.update();
 }
 
+/**
+ * Handles the camera's movements in case of a keyboard input.
+ * Using the frametime allows fluid movements with a constant speed.
+ *
+ * @param camera The camera to move
+ * @param frametime The framtime in seconds
+ */
 void processCamMovement(Camera camera, float frametime) {
   if (moveUp) camera.adjustColatitude(-CAMERA_SPEED * frametime);
   if (moveDown) camera.adjustColatitude(CAMERA_SPEED * frametime);
@@ -174,6 +184,34 @@ void keyPressed() {
       case 'h':
       case 'H':
         this.land.toggleHeatmap();
+        break;
+
+      case '1':
+        this.cam.setLightPosition(-(float)Map3D.width / 2.0f, (float)Map3D.height / 2.0f, LIGHT_Z);
+        break;
+      case '2':
+        this.cam.setLightPosition(0.0f, (float)Map3D.height / 2.0f, LIGHT_Z);
+        break;
+      case '3':
+        this.cam.setLightPosition((float)Map3D.width / 2.0f, (float)Map3D.height / 2.0f, LIGHT_Z);
+        break;
+      case '4':
+        this.cam.setLightPosition(-(float)Map3D.width / 2.0f, 0.0f, LIGHT_Z);
+        break;
+      case '5':
+        this.cam.setLightPosition(0.0f, 0.0f, LIGHT_Z);
+        break;
+      case '6':
+        this.cam.setLightPosition((float)Map3D.width / 2.0f, 0.0f, LIGHT_Z);
+        break;
+      case '7':
+        this.cam.setLightPosition(-(float)Map3D.width / 2.0f, -(float)Map3D.height / 2.0f, LIGHT_Z);
+        break;
+      case '8':
+        this.cam.setLightPosition(0.0f, -(float)Map3D.height / 2.0f, LIGHT_Z);
+        break;
+      case '9':
+        this.cam.setLightPosition((float)Map3D.width / 2.0f, -(float)Map3D.height / 2.0f, LIGHT_Z);
         break;
       
       default:

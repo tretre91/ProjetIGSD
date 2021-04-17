@@ -57,7 +57,7 @@ public class Roads {
         
         portion = createShape();
         portion.beginShape(QUAD_STRIP);
-        portion.emissive(0x7F);
+        portion.emissive(0.55*red(laneColor), 0.55*green(laneColor), 0.55*blue(laneColor));
         portion.noStroke();
         portion.fill(laneColor);
         

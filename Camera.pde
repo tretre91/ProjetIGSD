@@ -6,6 +6,7 @@ public class Camera {
   private float longitude;
   private float colatitude;
   
+  private float lightX = 0.0f, lightY = 0.0f, lightZ = 1000.0f;
   private boolean lightning = false;
   
   /**
@@ -26,12 +27,24 @@ public class Camera {
    * Refreshes the lighting and the camera.
    */
   public void update() {
-    ambientLight(0x60, 0x60, 0x60);
-    if (lightning)
-      directionalLight(0x70, 0x70, 0x40, 0, 0, -1);
+    ambientLight(0x50, 0x50, 0x50);
+    if (lightning) {
+      pointLight(0x70, 0x70, 0x40, lightX, lightY, lightZ);
+      fill(255, 255, 0);
+      emissive(255, 255, 0);
+    } else {
+      fill(25, 25, 25);
+      emissive(140, 140, 0);
+    }
     lightFalloff(0.0f, 0.0f, 1.0f);
     lightSpecular(0.0f, 0.0f, 0.0f);
     
+    pushMatrix();
+    translate(lightX, lightY, lightZ);
+    noStroke();
+    sphere(50.0f);
+    popMatrix();
+
     camera(
       x, y, z,
       0, 0, 0,
@@ -44,6 +57,15 @@ public class Camera {
    */
   public void toggle() {
     lightning = !lightning;
+  }
+
+  /**
+   * Sets the direction of the directionnal light
+   */
+  public void setLightPosition(float x, float y, float z) {
+    lightX = x;
+    lightY = y;
+    lightZ = z;
   }
   
   /**
