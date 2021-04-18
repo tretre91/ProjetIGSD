@@ -6,6 +6,7 @@ instructions/
 # Ignore le rapport et le fichier qui contient les remarques
 Remarques.md
 *.docx
+*rapport*
 assets/
 
 # Ignore les dossiers spécifiques à vscode

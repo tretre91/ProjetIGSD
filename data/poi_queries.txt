@@ -1,6 +1,4 @@
-/*
-Requête pour récuperer les distributeurs automatiques de billets
-*/
+// Requête pour récuperer les distributeurs automatiques de billets
 [out:json][timeout:25][bbox:48.6935887,2.1504057,48.7201061,2.2187721];
 (
 node["amenity"="atm"];
@@ -10,9 +8,7 @@ out body;
 >;
 out skel qt;
 
-/*
-Requête pour récuperer les arrêts de bus
-*/
+// Requête pour récuperer les arrêts de bus
 [out:json][timeout:25][bbox:48.6935887,2.1504057,48.7201061,2.2187721];
 (
 node["bus"="yes"]["highway"="bus_stop"];

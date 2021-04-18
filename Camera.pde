@@ -6,7 +6,7 @@ public class Camera {
   private float longitude;
   private float colatitude;
   
-  private float lightX = 0.0f, lightY = 0.0f, lightZ = 1000.0f;
+  private float lightX = 0.0f, lightY = 0.0f, lightZ = 1200.0f;
   private boolean lightning = false;
   
   /**

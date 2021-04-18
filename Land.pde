@@ -2,7 +2,6 @@ public class Land {
   private float landWidth, landHeight;
   private PShape shadow, wireFrame, satellite;
   private Map3D map;
-  private Poi poi;
   private PShader heatmapShader, wfHeatmapShader;
   private boolean showHeatmap = true;
   
@@ -58,10 +57,6 @@ public class Land {
       }
     }
     heatmap.loadPixels();
-    final int[] indices = {0,1,3,2};
-    Map3D.ObjectPoint[] points = new Map3D.ObjectPoint[4];
-    this.poi = new Poi(this.map);
-    final ArrayList<PVector> pointsOfInterest = poi.getPoints("bus_stops.geojson");
     
     // Wireframe shape
     this.wfHeatmapShader = loadShader("wireframeHeatmapFrag.glsl", "wireframeHeatmapVert.glsl");
@@ -80,37 +75,31 @@ public class Land {
     this.satellite.texture(uvmap);
     final float uStep = (uvmap.width * tileSize) / landWidth;
     final float vStep = (uvmap.height * tileSize) / landHeight;
-    float v, u = 0.0f;
-    final PVector[] texOffsets = { new PVector(0,0,0), new PVector(uStep,0,0), new PVector(0,vStep,0), new PVector(uStep,vStep,0) };
-
-    PVector[] normals = new PVector[4];
     
-    for (float i = -landWidth/2; i < landWidth/2; i += tileSize) {
-      points[0] = this.map.new ObjectPoint(i, -landHeight/2);
-      normals[0] = points[0].toNormal();
-      points[1] = this.map.new ObjectPoint(i + tileSize, -landHeight/2);
-      normals[1] = points[1].toNormal();
-      v = 0.0f;
-      for (float j = -landHeight/2; j < landHeight/2; j += tileSize) {
-        points[2] = this.map.new ObjectPoint(i, j + tileSize);
-        normals[2] = points[2].toNormal();
-        points[3] = this.map.new ObjectPoint(i + tileSize, j + tileSize);
-        normals[3] = points[3].toNormal();
-        for (int k: indices) {
-          final color heatColor = heatmap.pixels[pixelIndex(points[k].x, points[k].y, heatmap)];
-          this.satellite.attrib("heat", red(heatColor), green(heatColor), blue(heatColor), alpha(heatColor));
-          this.satellite.normal(normals[k].x, normals[k].y, normals[k].z);
-          this.satellite.vertex(points[k].x, points[k].y, points[k].z, u + texOffsets[k].x, v + texOffsets[k].y);
-          this.wireFrame.attrib("heat", red(heatColor), green(heatColor), blue(heatColor), alpha(heatColor));
-          this.wireFrame.vertex(points[k].x, points[k].y, points[k].z);
-        }
-        for (int k = 0; k < 2; k++) {
-          points[k] = points[k+2];
-          normals[k] = normals[k+2];
-        }
-        v += vStep;
+    Map3D.ObjectPoint p1, p2, p3, p4;
+    PVector n1, n2, n3, n4;
+
+    for (float i = -landWidth/2, u = 0.0f; i < landWidth/2; i += tileSize, u += uStep) {
+      p1 = this.map.new ObjectPoint(i, -landHeight/2);
+      n1 = p1.toNormal();
+      p2 = this.map.new ObjectPoint(i + tileSize, -landHeight/2);
+      n2 = p2.toNormal();
+      for (float j = -landHeight/2, v = 0.0f; j < landHeight/2; j += tileSize, v += vStep) {
+        p3 = this.map.new ObjectPoint(i, j + tileSize);
+        n3 = p3.toNormal();
+        p4 = this.map.new ObjectPoint(i + tileSize, j + tileSize);
+        n4 = p4.toNormal();
+        
+        addVertex(p1, n1, u, v, heatmap);
+        addVertex(p2, n2, u + uStep, v, heatmap);
+        addVertex(p4, n4, u + uStep, v  + vStep, heatmap);
+        addVertex(p3, n3, u, v + vStep, heatmap);
+
+        p1 = p3;
+        n1 = n3;
+        p2 = p4;
+        n2 = n4;
       }
-      u += uStep;
     }
     this.satellite.endShape();
     this.wireFrame.endShape();
@@ -121,6 +110,23 @@ public class Land {
     this.shadow.setVisible(true);
     this.wireFrame.setVisible(false);
     this.satellite.setVisible(true);
+  }
+
+  /**
+   * Adds a vertex to the satellite and wireframe shapes.
+   *
+   * @param point   The point to add
+   * @param normal  The point's normal vector
+   * @param u, v    The point's coordinates on the texture
+   * @param heatmap The heatmap texture to apply
+   */
+  void addVertex(Map3D.ObjectPoint point, PVector normal, float u, float v, PImage heatmap) {
+    final color heatColor = heatmap.pixels[pixelIndex(point.x, point.y, heatmap)];
+    this.satellite.attrib("heat", red(heatColor), green(heatColor), blue(heatColor), alpha(heatColor));
+    this.satellite.normal(normal.x, normal.y, normal.z);
+    this.satellite.vertex(point.x, point.y, point.z, u, v);
+    this.wireFrame.attrib("heat", red(heatColor), green(heatColor), blue(heatColor), alpha(heatColor));
+    this.wireFrame.vertex(point.x, point.y, point.z);
   }
 
   /**
