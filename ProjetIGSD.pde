@@ -70,8 +70,7 @@ void setup() {
   // Pour génerer une texture de carte de chaleur :
   // Poi poi = new Poi(this.map);
   // poi.createHeatmap(new color[]{color(0,255,0), color(255,0,0)}, "bus_stops.geojson", "atm.geojson");
-  PImage heatmap = loadImage("heatmap.png");
-  this.land = new Land(this.map, "paris_saclay_high_res.jpg", heatmap);
+  this.land = new Land(this.map, "paris_saclay_high_res.jpg", "heatmap.png");
   this.gpx = new Gpx(this.map, "trail.geojson", cam);
   
   this.railways = new Railways(this.map, "railways.geojson");

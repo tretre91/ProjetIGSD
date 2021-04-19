@@ -24,14 +24,15 @@ public class Land {
   *
   * @param map             Land associated elevation Map3D object
   * @param textureFilename The filename of the texture to apply to the land
-  * @param heatmap         A PImage holding the heatmap texture, such texture
-  *                        can be generated using the Poi.createHeatmap() method
+  * @param heatmapTexture  The filename of a texture containing the heatmaps
+  *                        to be applied on the Land object
   */
-  Land(Map3D map, String textureFilename, PImage heatmap) {
+  Land(Map3D map, String textureFilename, String heatmapTexture) {
     final float tileSize = 25.0f;
     this.map = map;
     this.landWidth = (float)Map3D.width;
     this.landHeight = (float)Map3D.height;
+    PImage heatmap = loadImage(heatmapTexture);
     
     // Shadow shape
     this.shadow = createShape();
